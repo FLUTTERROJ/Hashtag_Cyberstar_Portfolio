@@ -1,10 +1,13 @@
 :root {
-  --outer-bg: #d5d5d7;
-  --ink: #e8e8f3;
+  --outer-bg: #d6d6d9;
+  --deep-bg: #010028;
+  --ink: #8ad5e4;
+  --cyan: #4ed9e9;
+  --cyan-soft: #6ec8d8;
   --line: #2ea2ff;
-  --line-pink: #cb4cc2;
-  --card-bg: rgba(19, 16, 58, 0.56);
-  --card-line: rgba(90, 88, 184, 0.55);
+  --line-pink: #d068c8;
+  --card-bg: rgba(10, 10, 52, 0.6);
+  --card-line: #3e3d93;
 }
 
 * {
@@ -61,7 +64,7 @@ a {
 }
 
 .site-nav .active {
-  color: #ffffff;
+  color: var(--cyan);
 }
 
 .hero {
@@ -103,8 +106,8 @@ a {
   left: 50%;
   transform: translateX(-50%);
   border-radius: 50%;
-  border: 3px solid #84c2ff;
-  background: radial-gradient(circle, #ffffff 0 20%, #6293ff 43%, rgba(98, 147, 255, 0.16) 100%);
+  border: 3px solid #7bbded;
+  background: radial-gradient(circle, #c9f6ff 0 20%, #5a8ff0 43%, rgba(98, 147, 255, 0.16) 100%);
   box-shadow: 0 0 16px rgba(86, 181, 255, 0.95);
 }
 
@@ -179,11 +182,11 @@ a {
 .timeline-card a {
   margin-top: 0.85rem;
   display: inline-block;
-  border: 3px solid #3770d5;
+  border: 3px solid #3b4b95;
   border-radius: 10px;
   padding: 0.38rem 1.15rem;
   font: 700 clamp(1.6rem, 2vw, 2.2rem) "Rajdhani", sans-serif;
-  color: #ececf5;
+  color: var(--cyan-soft);
   background: rgba(28, 30, 94, 0.56);
 }
 

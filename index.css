@@ -15,10 +15,17 @@
   padding: 0;
 }
 
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
 body {
   background: var(--bg-deep);
   color: var(--text);
   font-family: "Space Grotesk", sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -28,6 +35,8 @@ a {
 
 .page-shell {
   width: 100%;
+  max-width: none;
+  min-height: 100vh;
   margin: 0;
   background: var(--bg-deep);
   border-right: 2px solid #b13da9;
