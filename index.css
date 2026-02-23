@@ -16,7 +16,7 @@
 }
 
 body {
-  background: var(--bg-outer);
+  background: var(--bg-deep);
   color: var(--text);
   font-family: "Space Grotesk", sans-serif;
 }
@@ -27,8 +27,8 @@ a {
 }
 
 .page-shell {
-  width: min(980px, 92vw);
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
   background: var(--bg-deep);
   border-right: 2px solid #b13da9;
   border-left: 1px solid #4a1972;
