@@ -16,10 +16,16 @@
   padding: 0;
 }
 
+html,
 body {
-  background: var(--outer-bg);
+  min-height: 100%;
+}
+
+body {
+  background: var(--deep-bg);
   color: var(--ink);
   font-family: "Space Grotesk", sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -28,9 +34,7 @@ a {
 }
 
 .canvas {
-  width: min(1260px, 100vw);
   min-height: 100vh;
-  margin: 0 auto;
   background:
     radial-gradient(circle at 48% 42%, rgba(79, 128, 255, 0.22), transparent 15%),
     radial-gradient(circle at 48% 70%, rgba(194, 76, 195, 0.18), transparent 16%),
@@ -39,8 +43,9 @@ a {
 }
 
 .container {
-  width: min(1170px, 94vw);
-  margin: 0 auto;
+  margin: 0;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .site-header {
