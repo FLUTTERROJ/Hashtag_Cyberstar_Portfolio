@@ -156,7 +156,7 @@ a {
 .timeline-card {
   position: absolute;
   width: min(480px, 43vw);
-  height: clamp(250px, 28vw, 320px);
+  height: clamp(210px, 24vw, 270px);
   overflow: hidden;
   perspective: 1400px;
   transform-style: preserve-3d;
@@ -305,7 +305,7 @@ a {
     left: 50%;
     right: auto;
     transform: translateX(-50%);
-    height: 300px;
+    height: 250px;
   }
 
   .timeline-card.right,
