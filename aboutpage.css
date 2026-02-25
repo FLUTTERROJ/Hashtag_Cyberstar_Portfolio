@@ -217,8 +217,8 @@ a {
 }
 
 .pill-wrap span {
-  border: 2px solid #4b4fb9;
-  color: #63d8eb;
+  border: 2px solid #2f3f82;
+  color: #b66fd8;
   border-radius: 999px;
   padding: 0.16rem 0.8rem;
   font: 700 clamp(1rem, 1.05vw, 1.3rem) "Rajdhani", sans-serif;
