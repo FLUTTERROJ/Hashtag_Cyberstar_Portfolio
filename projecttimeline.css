@@ -157,6 +157,7 @@ a {
   position: absolute;
   width: min(480px, 43vw);
   height: clamp(250px, 28vw, 320px);
+  overflow: hidden;
   perspective: 1400px;
   transform-style: preserve-3d;
 }
@@ -234,6 +235,8 @@ a {
 
 .card-back {
   opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
   z-index: 1;
   display: grid;
   align-content: start;
@@ -261,6 +264,7 @@ a {
 
 .timeline-card:hover .card-back {
   opacity: 1;
+  visibility: visible;
 }
 
 .timeline-card.right:hover .card-front {
