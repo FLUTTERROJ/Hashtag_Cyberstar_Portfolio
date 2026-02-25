@@ -70,10 +70,17 @@ a {
 
 .main-nav a {
   color: var(--cyan-soft);
+  opacity: 0.68;
   transition: color 0.2s ease;
 }
 
+.main-nav a.active {
+  opacity: 1;
+  color: var(--cyan);
+}
+
 .main-nav a:hover {
+  opacity: 1;
   color: var(--cyan);
 }
 
@@ -301,8 +308,6 @@ a {
     border: none;
   }
 
-  .site-header,
-  .site-footer,
   .lanes,
   .contact-panel {
     padding-left: 1rem;

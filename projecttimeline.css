@@ -44,32 +44,46 @@ a {
 
 .container {
   margin: 0;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .site-header {
-  padding: 1.8rem 0 1.2rem;
+  padding: 1rem 0.9rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 0.9rem;
 }
 
 .logo {
-  font: 700 clamp(2rem, 3vw, 3.1rem) "Rajdhani", sans-serif;
-  letter-spacing: 0.05em;
+  color: var(--cyan);
+  font-family: "Rajdhani", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 .site-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: clamp(0.9rem, 1.8vw, 2rem);
-  font: 700 clamp(1.7rem, 2.4vw, 3rem) "Rajdhani", sans-serif;
+  gap: 1.3rem;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.site-nav a {
+  opacity: 0.68;
 }
 
 .site-nav .active {
+  opacity: 1;
   color: var(--cyan);
+}
+
+.site-nav a:hover {
+  opacity: 1;
 }
 
 .hero {
@@ -195,9 +209,10 @@ a {
   background: rgba(28, 30, 94, 0.56);
 }
 
-@media (max-width: 920px) {
+@media (max-width: 900px) {
   .site-nav {
-    font-size: 2.1rem;
+    font-size: 1.6rem;
+    gap: 0.9rem;
   }
 
   .timeline {
@@ -242,12 +257,7 @@ a {
   }
 }
 
-@media (max-width: 680px) {
-  .site-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
+@media (max-width: 640px) {
   .hero h2 {
     font-size: 3.4rem;
   }
@@ -266,5 +276,9 @@ a {
 
   .timeline-card a {
     font-size: 1.4rem;
+  }
+
+  .site-nav {
+    font-size: 1.3rem;
   }
 }
