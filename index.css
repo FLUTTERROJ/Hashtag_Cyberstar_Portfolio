@@ -207,6 +207,7 @@ a {
 
 .contact-panel {
   background: var(--bg-panel);
+  margin: 0 2.8rem 2.2rem;
   padding: 1.25rem 1.2rem;
   border: 3px solid var(--purple-line);
   border-radius: 28px;
@@ -314,6 +315,8 @@ a {
 
   .lanes,
   .contact-panel {
+    margin-left: 1rem;
+    margin-right: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
   }
