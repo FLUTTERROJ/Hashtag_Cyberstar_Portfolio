@@ -147,6 +147,10 @@ h3 {
   gap: 1rem;
 }
 
+.with-aside article {
+  min-width: 0;
+}
+
 .two-col {
   margin-top: 0.5rem;
   display: grid;
@@ -339,10 +343,23 @@ h3 {
 }
 
 @media (min-width: 901px) {
+  .with-aside {
+    grid-template-columns: minmax(0, 1fr) 22rem;
+    align-items: start;
+  }
+
+  main.container > section {
+    max-width: 100%;
+  }
+
+  main.container > section:not(.title-block):not(.hero-shot):not(.with-aside) {
+    padding-right: 24rem;
+  }
+
   .toc {
     position: sticky;
     top: 6.8rem;
-    width: min(330px, 28vw);
+    width: 22rem;
     max-height: calc(100vh - 8rem);
     overflow: auto;
   }
