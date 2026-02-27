@@ -164,8 +164,6 @@
   </div>
   <script>
     (() => {
-      const toc = document.querySelector(".toc");
-      const problemSection = document.querySelector("#problem");
       const links = Array.from(document.querySelectorAll(".toc a[href^='#']"));
       const sections = links
         .map((link) => document.querySelector(link.getAttribute("href")))
@@ -200,22 +198,6 @@
       );
 
       sections.forEach((section) => observer.observe(section));
-
-      const toggleTocVisibility = () => {
-        if (!toc || !problemSection || window.innerWidth <= 900) return;
-        const triggerTop = problemSection.getBoundingClientRect().top;
-        toc.classList.toggle("toc-visible", triggerTop <= 90);
-      };
-
-      window.addEventListener("scroll", toggleTocVisibility, { passive: true });
-      window.addEventListener("resize", () => {
-        if (window.innerWidth <= 900) {
-          toc?.classList.remove("toc-visible");
-        } else {
-          toggleTocVisibility();
-        }
-      });
-      toggleTocVisibility();
     })();
   </script>
 </body>

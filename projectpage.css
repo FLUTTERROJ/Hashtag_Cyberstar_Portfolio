@@ -16,6 +16,7 @@
 html,
 body {
   min-height: 100%;
+  font-size: 90%;
 }
 
 body {
@@ -338,28 +339,12 @@ h3 {
 }
 
 @media (min-width: 901px) {
-  main.container {
-    padding-right: 24rem;
-  }
-
   .toc {
-    position: fixed;
+    position: sticky;
     top: 6.8rem;
-    right: 2rem;
     width: min(330px, 28vw);
     max-height: calc(100vh - 8rem);
     overflow: auto;
-    z-index: 20;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(8px);
-    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
-  }
-
-  .toc.toc-visible {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
   }
 }
 
