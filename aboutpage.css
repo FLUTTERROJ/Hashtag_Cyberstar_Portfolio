@@ -25,6 +25,11 @@ body {
   overflow-x: hidden;
 }
 
+main,
+main * {
+  font-family: "Noto Sans Mono", monospace !important;
+}
+
 a {
   color: inherit;
   text-decoration: none;
