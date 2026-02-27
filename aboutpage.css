@@ -195,6 +195,7 @@ a {
   font-size: clamp(1rem, 1.2vw, 1.45rem);
   max-width: 65ch;
   line-height: 1.2;
+  color: #b66fd8;
 }
 
 .values-card,
@@ -244,6 +245,7 @@ a {
   border-radius: 999px;
   padding: 0.4rem 1.35rem;
   font: 700 clamp(1.15rem, 1.3vw, 1.7rem) "Rajdhani", sans-serif;
+  color: #b66fd8;
   min-width: 170px;
   text-align: center;
 }

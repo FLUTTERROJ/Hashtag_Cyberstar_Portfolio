@@ -32,7 +32,7 @@
         <div class="screenshot-placeholder">Find mental-health support, fast.</div>
       </section>
 
-      <section class="with-aside">
+      <section class="with-aside" id="problem">
         <article>
           <h3>Problem &amp; Context</h3>
           <p class="lead">Why it mattered and constraints that shape the build.</p>
@@ -46,7 +46,7 @@
 
         <aside class="toc panel">
           <h4>CONTENTS</h4>
-          <a href="#solution">Problem &amp; Context</a>
+          <a href="#problem">Problem &amp; Context</a>
           <a href="#solution">Solution Overview</a>
           <a href="#architecture">Architecture</a>
           <a href="#engineering">Engineering Decisions</a>
@@ -162,5 +162,43 @@
       <p>&copy; 2026 Suhas Agrawal. Crafted with intent.</p>
     </footer>
   </div>
+  <script>
+    (() => {
+      const links = Array.from(document.querySelectorAll(".toc a[href^='#']"));
+      const sections = links
+        .map((link) => document.querySelector(link.getAttribute("href")))
+        .filter(Boolean);
+
+      const setCurrent = (id) => {
+        links.forEach((link) => {
+          const active = link.getAttribute("href") === `#${id}`;
+          link.classList.toggle("is-current", active);
+          link.setAttribute("aria-current", active ? "true" : "false");
+        });
+      };
+
+      if (sections.length) {
+        setCurrent(sections[0].id);
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          const visible = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+          if (visible[0]?.target?.id) {
+            setCurrent(visible[0].target.id);
+          }
+        },
+        {
+          rootMargin: "-22% 0px -55% 0px",
+          threshold: [0.15, 0.35, 0.55],
+        }
+      );
+
+      sections.forEach((section) => observer.observe(section));
+    })();
+  </script>
 </body>
 </html>
