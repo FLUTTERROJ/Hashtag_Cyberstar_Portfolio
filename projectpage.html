@@ -32,32 +32,20 @@
         <div class="screenshot-placeholder">Find mental-health support, fast.</div>
       </section>
 
-      <section class="with-aside" id="problem">
-        <article>
-          <h3>Problem &amp; Context</h3>
-          <p class="lead">Why it mattered and constraints that shape the build.</p>
-          <div class="two-col">
-            <p>Finding mental health support can be overwhelming, especially during moments of distress. Existing directories are often too broad or disconnected, delaying access when users need immediate help.</p>
-            <p>I scoped the build to solve one major bottleneck: connecting users quickly with relevant support based on location and need.</p>
-            <p>A key limitation was the private nature of health data and service boundaries. Integration into live systems required careful privacy design.</p>
-            <p>Balancing speed, trust, and clarity drove the architecture and product choices throughout implementation.</p>
-          </div>
-        </article>
+      <div class="content-layout">
+        <div class="content-main">
+          <section id="problem">
+            <h3>Problem &amp; Context</h3>
+            <p class="lead">Why it mattered and constraints that shape the build.</p>
+            <div class="two-col">
+              <p>Finding mental health support can be overwhelming, especially during moments of distress. Existing directories are often too broad or disconnected, delaying access when users need immediate help.</p>
+              <p>I scoped the build to solve one major bottleneck: connecting users quickly with relevant support based on location and need.</p>
+              <p>A key limitation was the private nature of health data and service boundaries. Integration into live systems required careful privacy design.</p>
+              <p>Balancing speed, trust, and clarity drove the architecture and product choices throughout implementation.</p>
+            </div>
+          </section>
 
-        <aside class="toc panel">
-          <h4>CONTENTS</h4>
-          <a href="#problem">Problem &amp; Context</a>
-          <a href="#solution">Solution Overview</a>
-          <a href="#architecture">Architecture</a>
-          <a href="#engineering">Engineering Decisions</a>
-          <a href="#timeline">Timeline &amp; Scope</a>
-          <a href="#fails">Failures &amp; Challenges</a>
-          <a href="#quality">Quality &amp; Reliability</a>
-          <a href="#next">Next Steps</a>
-        </aside>
-      </section>
-
-      <section id="solution">
+          <section id="solution">
         <h3>Solution Overview</h3>
         <p class="lead">Key features and the core workflow.</p>
         <div class="chip-grid">
@@ -68,9 +56,9 @@
           <article class="panel">Clear handoff paths from app guidance to external services.</article>
           <article class="panel">Built for maintainability with typed APIs and logs.</article>
         </div>
-      </section>
+          </section>
 
-      <section id="architecture">
+          <section id="architecture">
         <h3>Architecture</h3>
         <p class="lead">High-level system boundaries and tradeoffs.</p>
         <div class="arch-wrap">
@@ -86,9 +74,9 @@
             <li>Typed interfaces reduce regressions across integrations.</li>
           </ul>
         </div>
-      </section>
+          </section>
 
-      <section id="engineering">
+          <section id="engineering">
         <h3>Engineering Decisions</h3>
         <p class="lead">Tradeoffs, alternatives, and what I would change later.</p>
         <div class="stack-list">
@@ -97,9 +85,9 @@
           <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Django REST Framework + FastAPI Integration</article>
           <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Ethical Chatbot Constraints</article>
         </div>
-      </section>
+          </section>
 
-      <section id="timeline">
+          <section id="timeline">
         <h3>Timeline &amp; Scope</h3>
         <p class="lead">How the project moved from discovery to launch.</p>
         <div class="mini-cards">
@@ -108,9 +96,9 @@
           <article class="panel"><h4>CORE</h4><p>API, frontend wiring, CI.</p></article>
           <article class="panel"><h4>OPS</h4><p>Hosting, observability, docs.</p></article>
         </div>
-      </section>
+          </section>
 
-      <section id="fails">
+          <section id="fails">
         <h3>Failures &amp; Challenges</h3>
         <p class="lead">What did not work first and what changed.</p>
         <div class="stack-list">
@@ -119,9 +107,9 @@
           <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Auth assumptions were too optimistic for cross-role access.</article>
           <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Pagination strategy needed refactor to stay fast under load.</article>
         </div>
-      </section>
+          </section>
 
-      <section id="quality">
+          <section id="quality">
         <h3>Quality &amp; Reliability</h3>
         <p class="lead">Production checklist with evidence.</p>
         <div class="chip-grid quality-grid">
@@ -134,9 +122,9 @@
           <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">CI smoke</h4><p>Playwright smoke checks before merge.</p></article>
           <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Security</h4><p>Boundary checks and safe defaults.</p></article>
         </div>
-      </section>
+          </section>
 
-      <section id="next" class="next-steps">
+          <section id="next" class="next-steps">
         <h3>Next Steps</h3>
         <p class="lead">If I had two more weeks, this is where I would take it.</p>
         <ul>
@@ -145,7 +133,21 @@
           <li>Add better markdown editor for descriptions and comments.</li>
           <li>Add guided demo tour overlay and reset demo seed endpoint.</li>
         </ul>
-      </section>
+          </section>
+        </div>
+
+        <aside class="toc panel">
+          <h4>CONTENTS</h4>
+          <a href="#problem">Problem &amp; Context</a>
+          <a href="#solution">Solution Overview</a>
+          <a href="#architecture">Architecture</a>
+          <a href="#engineering">Engineering Decisions</a>
+          <a href="#timeline">Timeline &amp; Scope</a>
+          <a href="#fails">Failures &amp; Challenges</a>
+          <a href="#quality">Quality &amp; Reliability</a>
+          <a href="#next">Next Steps</a>
+        </aside>
+      </div>
     </main>
 
     <footer class="site-footer container">

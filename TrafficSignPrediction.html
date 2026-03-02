@@ -32,32 +32,20 @@
         <div class="screenshot-placeholder">Fast sign classification for safer autonomous perception.</div>
       </section>
 
-      <section class="with-aside" id="problem">
-        <article>
-          <h3>Problem &amp; Context</h3>
-          <p class="lead">Road-sign recognition must be fast, robust, and consistent.</p>
-          <div class="two-col">
-            <p>Traffic scenes include blur, occlusion, and lighting variance, which can reduce model reliability in deployment.</p>
-            <p>The objective was to build a lean predictor that remains stable across common environmental distortions.</p>
-            <p>Constraints included limited training time and balancing inference speed against classification accuracy.</p>
-            <p>The project centered on practical performance, not only benchmark scores.</p>
-          </div>
-        </article>
+      <div class="content-layout">
+        <div class="content-main">
+          <section id="problem">
+            <h3>Problem &amp; Context</h3>
+            <p class="lead">Road-sign recognition must be fast, robust, and consistent.</p>
+            <div class="two-col">
+              <p>Traffic scenes include blur, occlusion, and lighting variance, which can reduce model reliability in deployment.</p>
+              <p>The objective was to build a lean predictor that remains stable across common environmental distortions.</p>
+              <p>Constraints included limited training time and balancing inference speed against classification accuracy.</p>
+              <p>The project centered on practical performance, not only benchmark scores.</p>
+            </div>
+          </section>
 
-        <aside class="toc panel">
-          <h4>CONTENTS</h4>
-          <a href="#problem">Problem &amp; Context</a>
-          <a href="#solution">Solution Overview</a>
-          <a href="#architecture">Architecture</a>
-          <a href="#engineering">Engineering Decisions</a>
-          <a href="#timeline">Timeline &amp; Scope</a>
-          <a href="#fails">Failures &amp; Challenges</a>
-          <a href="#quality">Quality &amp; Reliability</a>
-          <a href="#next">Next Steps</a>
-        </aside>
-      </section>
-
-      <section id="solution">
+          <section id="solution">
         <h3>Solution Overview</h3>
         <p class="lead">Training and inference pipeline highlights.</p>
         <div class="chip-grid">
@@ -68,9 +56,9 @@
           <article class="panel">Inference wrapper with consistent preprocessing rules.</article>
           <article class="panel">Model packaging for reproducible evaluation runs.</article>
         </div>
-      </section>
+          </section>
 
-      <section id="architecture">
+          <section id="architecture">
         <h3>Architecture</h3>
         <p class="lead">High-level components of the ML workflow.</p>
         <div class="arch-wrap">
@@ -86,9 +74,9 @@
             <li>Export path for lightweight runtime deployment.</li>
           </ul>
         </div>
-      </section>
+          </section>
 
-      <section id="engineering">
+          <section id="engineering">
         <h3>Engineering Decisions</h3>
         <p class="lead">What was chosen and why.</p>
         <div class="stack-list">
@@ -97,9 +85,9 @@
           <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Early stopping based on validation plateau</article>
           <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Simple API wrapper for model serving demonstrations</article>
         </div>
-      </section>
+          </section>
 
-      <section id="timeline">
+          <section id="timeline">
         <h3>Timeline &amp; Scope</h3>
         <p class="lead">From dataset prep to deployable predictor.</p>
         <div class="mini-cards">
@@ -108,9 +96,9 @@
           <article class="panel"><h4>EVAL</h4><p>Per-class error analysis.</p></article>
           <article class="panel"><h4>SERVE</h4><p>Inference interface + docs.</p></article>
         </div>
-      </section>
+          </section>
 
-      <section id="fails">
+          <section id="fails">
         <h3>Failures &amp; Challenges</h3>
         <p class="lead">Where iteration was required.</p>
         <div class="stack-list">
@@ -119,9 +107,9 @@
           <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Input resizing assumptions caused early misclassification spikes</article>
           <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Inference benchmark varied across hardware targets</article>
         </div>
-      </section>
+          </section>
 
-      <section id="quality">
+          <section id="quality">
         <h3>Quality &amp; Reliability</h3>
         <p class="lead">Checks performed before finalizing model outputs.</p>
         <div class="chip-grid quality-grid">
@@ -132,7 +120,21 @@
           <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Error review</h4><p>Misclassified samples grouped by failure mode.</p></article>
           <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Documentation</h4><p>Usage notes and model limitations captured.</p></article>
         </div>
-      </section>
+          </section>
+        </div>
+
+        <aside class="toc panel">
+          <h4>CONTENTS</h4>
+          <a href="#problem">Problem &amp; Context</a>
+          <a href="#solution">Solution Overview</a>
+          <a href="#architecture">Architecture</a>
+          <a href="#engineering">Engineering Decisions</a>
+          <a href="#timeline">Timeline &amp; Scope</a>
+          <a href="#fails">Failures &amp; Challenges</a>
+          <a href="#quality">Quality &amp; Reliability</a>
+          <a href="#next">Next Steps</a>
+        </aside>
+      </div>
     </main>
 
     <footer class="site-footer container">

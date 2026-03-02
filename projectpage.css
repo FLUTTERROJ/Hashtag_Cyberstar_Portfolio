@@ -141,13 +141,7 @@ h3 {
   place-items: center;
 }
 
-.with-aside {
-  display: grid;
-  grid-template-columns: 1fr 0.6fr;
-  gap: 1rem;
-}
-
-.with-aside article {
+.content-main {
   min-width: 0;
 }
 
@@ -329,7 +323,7 @@ h3 {
     gap: 0.9rem;
   }
 
-  .with-aside,
+  .content-layout,
   .two-col,
   .chip-grid,
   .arch-wrap,
@@ -343,23 +337,16 @@ h3 {
 }
 
 @media (min-width: 901px) {
-  .with-aside {
+  .content-layout {
     grid-template-columns: minmax(0, 1fr) 22rem;
+    display: grid;
+    gap: 1rem;
     align-items: start;
-  }
-
-  main.container > section {
-    max-width: 100%;
-  }
-
-  main.container > section:not(.title-block):not(.hero-shot):not(.with-aside) {
-    padding-right: 24rem;
   }
 
   .toc {
     position: sticky;
     top: 6.8rem;
-    width: 22rem;
     max-height: calc(100vh - 8rem);
     overflow: auto;
   }

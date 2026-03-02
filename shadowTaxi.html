@@ -32,32 +32,20 @@
         <div class="screenshot-placeholder">Secure dispatch. Clear trip visibility.</div>
       </section>
 
-      <section class="with-aside" id="problem">
-        <article>
-          <h3>Problem &amp; Context</h3>
-          <p class="lead">Night transport can feel uncertain without trusted visibility.</p>
-          <div class="two-col">
-            <p>Riders often lack confidence in late-night travel because status updates are inconsistent and handoffs are opaque.</p>
-            <p>The project focused on reducing that uncertainty through clear trip states and better operator coordination.</p>
-            <p>Design constraints included low-friction reporting, simple state transitions, and clean interfaces under stress.</p>
-            <p>The core challenge was balancing operational detail with a calm, fast user experience.</p>
-          </div>
-        </article>
+      <div class="content-layout">
+        <div class="content-main">
+          <section id="problem">
+            <h3>Problem &amp; Context</h3>
+            <p class="lead">Night transport can feel uncertain without trusted visibility.</p>
+            <div class="two-col">
+              <p>Riders often lack confidence in late-night travel because status updates are inconsistent and handoffs are opaque.</p>
+              <p>The project focused on reducing that uncertainty through clear trip states and better operator coordination.</p>
+              <p>Design constraints included low-friction reporting, simple state transitions, and clean interfaces under stress.</p>
+              <p>The core challenge was balancing operational detail with a calm, fast user experience.</p>
+            </div>
+          </section>
 
-        <aside class="toc panel">
-          <h4>CONTENTS</h4>
-          <a href="#problem">Problem &amp; Context</a>
-          <a href="#solution">Solution Overview</a>
-          <a href="#architecture">Architecture</a>
-          <a href="#engineering">Engineering Decisions</a>
-          <a href="#timeline">Timeline &amp; Scope</a>
-          <a href="#fails">Failures &amp; Challenges</a>
-          <a href="#quality">Quality &amp; Reliability</a>
-          <a href="#next">Next Steps</a>
-        </aside>
-      </section>
-
-      <section id="solution">
+          <section id="solution">
         <h3>Solution Overview</h3>
         <p class="lead">Core workflow and value delivered.</p>
         <div class="chip-grid">
@@ -68,9 +56,9 @@
           <article class="panel">Clear handoff between dispatch, driver, and support teams.</article>
           <article class="panel">Operational logs for post-trip review and learning loops.</article>
         </div>
-      </section>
+          </section>
 
-      <section id="architecture">
+          <section id="architecture">
         <h3>Architecture</h3>
         <p class="lead">Service boundaries built for dependable operations.</p>
         <div class="arch-wrap">
@@ -86,9 +74,9 @@
             <li>Data model optimized around trip lifecycle states.</li>
           </ul>
         </div>
-      </section>
+          </section>
 
-      <section id="engineering">
+          <section id="engineering">
         <h3>Engineering Decisions</h3>
         <p class="lead">Tradeoffs and implementation choices.</p>
         <div class="stack-list">
@@ -97,9 +85,9 @@
           <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Lightweight operator dashboard before full admin suite</article>
           <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Prioritized reliability over edge feature density</article>
         </div>
-      </section>
+          </section>
 
-      <section id="timeline">
+          <section id="timeline">
         <h3>Timeline &amp; Scope</h3>
         <p class="lead">From initial framing to working prototype.</p>
         <div class="mini-cards">
@@ -108,9 +96,9 @@
           <article class="panel"><h4>HARDEN</h4><p>Error handling and audit logs.</p></article>
           <article class="panel"><h4>DEMO</h4><p>Scenario tests and walkthrough.</p></article>
         </div>
-      </section>
+          </section>
 
-      <section id="fails">
+          <section id="fails">
         <h3>Failures &amp; Challenges</h3>
         <p class="lead">Things that broke before they worked.</p>
         <div class="stack-list">
@@ -119,9 +107,9 @@
           <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Latency spikes exposed weak retry handling</article>
           <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Initial UI overloaded users with internal detail</article>
         </div>
-      </section>
+          </section>
 
-      <section id="quality">
+          <section id="quality">
         <h3>Quality &amp; Reliability</h3>
         <p class="lead">Production-readiness checks.</p>
         <div class="chip-grid quality-grid">
@@ -132,7 +120,21 @@
           <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Observability</h4><p>Trip logs and incident traceability.</p></article>
           <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Security</h4><p>Role-based access and safe defaults.</p></article>
         </div>
-      </section>
+          </section>
+        </div>
+
+        <aside class="toc panel">
+          <h4>CONTENTS</h4>
+          <a href="#problem">Problem &amp; Context</a>
+          <a href="#solution">Solution Overview</a>
+          <a href="#architecture">Architecture</a>
+          <a href="#engineering">Engineering Decisions</a>
+          <a href="#timeline">Timeline &amp; Scope</a>
+          <a href="#fails">Failures &amp; Challenges</a>
+          <a href="#quality">Quality &amp; Reliability</a>
+          <a href="#next">Next Steps</a>
+        </aside>
+      </div>
     </main>
 
     <footer class="site-footer container">
