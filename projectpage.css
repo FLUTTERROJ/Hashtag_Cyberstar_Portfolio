@@ -46,8 +46,8 @@ a {
 .container {
   width: min(1500px, 100%);
   margin: 0 auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: clamp(3rem, 6.5vw, 12.5rem);
+  padding-right: clamp(3rem, 6.5vw, 12.5rem);
 }
 
 .site-header,
@@ -150,7 +150,6 @@ h3 {
 
 .content-layout {
   margin-top: 2rem;
-  padding-inline: clamp(0.5rem, 1.8vw, 1.8rem);
 }
 
 .content-main > section {
@@ -267,6 +266,51 @@ h3 {
   gap: 0.52rem;
 }
 
+.stack-item.has-dropdown {
+  display: block;
+  padding: 0;
+}
+
+.stack-toggle {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 0.52rem;
+  font: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  padding: 0.78rem 0.95rem;
+}
+
+.stack-toggle:focus-visible {
+  outline: 2px solid rgba(102, 236, 255, 0.75);
+  outline-offset: 2px;
+  border-radius: 0.65rem;
+}
+
+.stack-toggle .dropdown-icon {
+  transition: transform 0.22s ease;
+}
+
+.stack-toggle[aria-expanded="true"] .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.stack-dropdown {
+  padding: 0 0.95rem 0.86rem 2rem;
+  font-size: clamp(0.84rem, 0.96vw, 0.94rem);
+  line-height: 1.42;
+  color: #8dd7e6;
+}
+
+.stack-dropdown p + p {
+  margin-top: 0.35rem;
+}
+
 .dropdown-icon {
   width: 14px;
   height: 14px;
@@ -351,7 +395,6 @@ h3 {
   .content-layout {
     margin-top: 1.3rem;
     gap: 1rem;
-    padding-inline: clamp(0.35rem, 3vw, 1rem);
   }
 
   .content-main > section {
@@ -370,7 +413,6 @@ h3 {
     display: grid;
     gap: 2.2rem;
     align-items: start;
-    padding-inline: clamp(1rem, 2.4vw, 2.8rem);
   }
 
   .toc {

@@ -76,14 +76,38 @@
         </div>
           </section>
 
-          <section id="engineering">
+      <section id="engineering">
         <h3>Engineering Decisions</h3>
         <p class="lead">What was chosen and why.</p>
         <div class="stack-list">
-          <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Balanced augmentation over aggressive synthetic distortion</article>
-          <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Smaller model variant for predictable inference latency</article>
-          <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Early stopping based on validation plateau</article>
-          <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Simple API wrapper for model serving demonstrations</article>
+          <article class="panel stack-item has-dropdown">
+            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="tsp-eng-1">
+              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              Balanced augmentation over aggressive synthetic distortion
+            </button>
+            <div class="stack-dropdown" id="tsp-eng-1" hidden>this is the content for dropdown</div>
+          </article>
+          <article class="panel stack-item has-dropdown">
+            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="tsp-eng-2">
+              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              Smaller model variant for predictable inference latency
+            </button>
+            <div class="stack-dropdown" id="tsp-eng-2" hidden>this is the content for dropdown</div>
+          </article>
+          <article class="panel stack-item has-dropdown">
+            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="tsp-eng-3">
+              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              Early stopping based on validation plateau
+            </button>
+            <div class="stack-dropdown" id="tsp-eng-3" hidden>this is the content for dropdown</div>
+          </article>
+          <article class="panel stack-item has-dropdown">
+            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="tsp-eng-4">
+              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              Simple API wrapper for model serving demonstrations
+            </button>
+            <div class="stack-dropdown" id="tsp-eng-4" hidden>this is the content for dropdown</div>
+          </article>
         </div>
           </section>
 
@@ -187,6 +211,24 @@
       );
 
       sections.forEach((section) => observer.observe(section));
+    })();
+
+    (() => {
+      const toggles = Array.from(document.querySelectorAll(".stack-toggle"));
+
+      toggles.forEach((toggle) => {
+        toggle.addEventListener("click", () => {
+          const targetId = toggle.getAttribute("aria-controls");
+          const content = targetId ? document.getElementById(targetId) : null;
+          const expanded = toggle.getAttribute("aria-expanded") === "true";
+          const nextState = !expanded;
+
+          toggle.setAttribute("aria-expanded", String(nextState));
+          if (content) {
+            content.hidden = !nextState;
+          }
+        });
+      });
     })();
   </script>
 </body>

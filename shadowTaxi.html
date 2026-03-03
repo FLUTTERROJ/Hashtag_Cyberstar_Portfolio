@@ -25,7 +25,10 @@
     <main class="container">
       <section class="title-block">
         <h2>Shadow Taxi</h2>
-        <p>A safety-first transport concept focused on transparent routing, dispatch visibility, and reliable rider updates.</p>
+        <p>Shadow Taxi is an arcade-style driving game where players take on the role of a taxi driver navigating busy streets to
+          pick up and drop off passengers. The goal is to deliver passengers as close to their destination as possible to maximize points,
+          while avoiding traffic and managing vehicle damage. With fast-paced movement, risk-reward scoring, and collectible power-ups, 
+          the game challenges players to balance precision driving with quick decision-making.</p>
       </section>
 
       <section class="hero-shot">
@@ -35,13 +38,13 @@
       <div class="content-layout">
         <div class="content-main">
           <section id="problem">
-            <h3>Problem &amp; Context</h3>
-            <p class="lead">Night transport can feel uncertain without trusted visibility.</p>
+            <h3>Context</h3>
+            <p class="lead">Why it was built and constraints that shape the build.</p>
             <div class="two-col">
-              <p>Riders often lack confidence in late-night travel because status updates are inconsistent and handoffs are opaque.</p>
-              <p>The project focused on reducing that uncertainty through clear trip states and better operator coordination.</p>
-              <p>Design constraints included low-friction reporting, simple state transitions, and clean interfaces under stress.</p>
-              <p>The core challenge was balancing operational detail with a calm, fast user experience.</p>
+              <p>Shadow Taxi was a project developed for fun, with a focus on gameplay mechanics, player feedback, and moment-to-moment challenge. The core loop centers around picking up one passenger at a time and transporting them safely to their destination. Players are rewarded based on how accurately they deliver passengers—dropping them closer to the target location results in higher scores, encouraging careful navigation rather than reckless driving.</p>
+              <p>The game environment is filled with other vehicles that the player must dodge. Collisions cause damage to the taxi, and once enough damage is accumulated, the vehicle is destroyed, ending the run. This damage system adds tension and forces players to balance speed with caution.</p>
+              <p>To support varied gameplay and player strategy, Shadow Taxi includes multiple power-ups that can temporarily protect the taxi or make navigation easier. These power-ups create moments of relief and momentum, helping players recover from mistakes or push for higher scores.</p>
+              <p>Overall, the project allowed me to experiment with scoring systems, player risk–reward mechanics, and game feel, while building a complete, replayable experience from concept to implementation.</p>
             </div>
           </section>
 
@@ -49,12 +52,12 @@
         <h3>Solution Overview</h3>
         <p class="lead">Core workflow and value delivered.</p>
         <div class="chip-grid">
-          <article class="panel">Unified trip-state timeline visible to riders and operators.</article>
-          <article class="panel">Operator console for assignment and exception handling.</article>
-          <article class="panel">Simple escalation model for delayed or abandoned routes.</article>
-          <article class="panel">Location-aware updates with explicit arrival confidence.</article>
-          <article class="panel">Clear handoff between dispatch, driver, and support teams.</article>
-          <article class="panel">Operational logs for post-trip review and learning loops.</article>
+          <article class="panel">Passenger pickup and drop-off system with distance-based scoring.</article>
+          <article class="panel">Real-time vehicle collision detection with progressive damage tracking.</article>
+          <article class="panel">Risk-reward gameplay loop encouraging precision driving over speed.</article>
+          <article class="panel">Power-up system providing temporary defensive and mobility advantages.</article>
+          <article class="panel">Score-driven replayability with increasing challenge over time.</article>
+          <article class="panel">Clear visual and gameplay feedback for player actions and consequences.</article>
         </div>
           </section>
 
@@ -63,27 +66,66 @@
         <p class="lead">Service boundaries built for dependable operations.</p>
         <div class="arch-wrap">
           <div class="panel arch-box">
-            <span>Next.js</span>
-            <span>FastAPI</span>
-            <span>Postgres</span>
-            <span>Redis</span>
+            <span>Java</span>
           </div>
           <ul>
-            <li>Typed APIs between rider app and dispatch tools.</li>
-            <li>Event-style logging for auditability and incident review.</li>
-            <li>Data model optimized around trip lifecycle states.</li>
+            <li>Modular Java classes separating gameplay logic, rendering, and input handling.</li>
+            <li>Central game loop managing state updates, collisions, and scoring.</li>
+            <li>Entity-based system for taxis, traffic vehicles, passengers, and power-ups.</li>
           </ul>
         </div>
           </section>
 
-          <section id="engineering">
+      <section id="engineering">
         <h3>Engineering Decisions</h3>
         <p class="lead">Tradeoffs and implementation choices.</p>
         <div class="stack-list">
-          <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Realtime state updates via polling first, websockets later</article>
-          <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Centralized trip-state enum to prevent UI drift</article>
-          <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Lightweight operator dashboard before full admin suite</article>
-          <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Prioritized reliability over edge feature density</article>
+          <article class="panel stack-item has-dropdown">
+            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="shadow-eng-1">
+              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              Use of Java for Game Logic and Architecture
+            </button>
+            <div class="stack-dropdown" id="shadow-eng-1" hidden>
+              <p>Leveraged Java's object-oriented design for modular classes.</p>
+              <p>Separated gameplay logic, rendering, and input handling.</p>
+              <p>Made the codebase maintainable and easy to extend for new features.</p>
+            </div>
+          </article>
+          <article class="panel stack-item has-dropdown">
+            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="shadow-eng-2">
+              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              Entity-Based System for Gameplay Objects
+            </button>
+            <div class="stack-dropdown" id="shadow-eng-2" hidden>
+              <p>Represented taxis, passengers, traffic vehicles, and power-ups as separate entities.</p>
+              <p>Enabled clear separation of responsibilities for each game element.</p>
+              <p>Simplified collision detection and interaction management.</p>
+              <p>Allowed easy addition of new entities in the future.</p>
+            </div>
+          </article>
+          <article class="panel stack-item has-dropdown">
+            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="shadow-eng-3">
+              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              Central Game Loop with Real-Time Updates
+            </button>
+            <div class="stack-dropdown" id="shadow-eng-3" hidden>
+              <p>Managed state updates, scoring, collisions, and player input continuously.</p>
+              <p>Ensured smooth and responsive gameplay.</p>
+              <p>Provided a consistent mechanism for real-time interactions between entities.</p>
+            </div>
+          </article>
+          <article class="panel stack-item has-dropdown">
+            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="shadow-eng-4">
+              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              Distance-Based Scoring and Progressive Damage Mechanics
+            </button>
+            <div class="stack-dropdown" id="shadow-eng-4" hidden>
+              <p>Encouraged strategic driving and precision over speed.</p>
+              <p>Introduced risk-reward dynamics with collisions and damage accumulation.</p>
+              <p>Integrated visual and gameplay feedback for player actions.</p>
+              <p>Enhanced replayability and overall challenge of the game.</p>
+            </div>
+          </article>
         </div>
           </section>
 
@@ -91,10 +133,10 @@
         <h3>Timeline &amp; Scope</h3>
         <p class="lead">From initial framing to working prototype.</p>
         <div class="mini-cards">
-          <article class="panel"><h4>DISCOVERY</h4><p>Risk mapping and user flows.</p></article>
-          <article class="panel"><h4>MVP</h4><p>Trip states and core dispatch.</p></article>
-          <article class="panel"><h4>HARDEN</h4><p>Error handling and audit logs.</p></article>
-          <article class="panel"><h4>DEMO</h4><p>Scenario tests and walkthrough.</p></article>
+          <article class="panel"><h4>Design</h4><p>Core gameplay mechanics + entity system + modular Java architecture.</p></article>
+          <article class="panel"><h4>Gameplay</h4><p>Taxi movement + passenger pick-up/drop-off +scoring + collision/damage system.</p></article>
+          <article class="panel"><h4>Power-Ups & Mechanics</h4><p>Defensive/mobility power-ups + risk-reward dynamics + visual feedback integration.</p></article>
+          <article class="panel"><h4>Testing & Refinement</h4><p>Bug fixes + difficulty balancing + replayability features + final polish.</p></article>
         </div>
           </section>
 
@@ -187,6 +229,24 @@
       );
 
       sections.forEach((section) => observer.observe(section));
+    })();
+
+    (() => {
+      const toggles = Array.from(document.querySelectorAll(".stack-toggle"));
+
+      toggles.forEach((toggle) => {
+        toggle.addEventListener("click", () => {
+          const targetId = toggle.getAttribute("aria-controls");
+          const content = targetId ? document.getElementById(targetId) : null;
+          const expanded = toggle.getAttribute("aria-expanded") === "true";
+          const nextState = !expanded;
+
+          toggle.setAttribute("aria-expanded", String(nextState));
+          if (content) {
+            content.hidden = !nextState;
+          }
+        });
+      });
     })();
   </script>
 </body>

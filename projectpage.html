@@ -76,14 +76,38 @@
         </div>
           </section>
 
-          <section id="engineering">
+      <section id="engineering">
         <h3>Engineering Decisions</h3>
         <p class="lead">Tradeoffs, alternatives, and what I would change later.</p>
         <div class="stack-list">
-          <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Backend Hosting &amp; CI/CD Setup</article>
-          <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Incomplete Backend Dependency</article>
-          <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Django REST Framework + FastAPI Integration</article>
-          <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Ethical Chatbot Constraints</article>
+          <article class="panel stack-item has-dropdown">
+            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="proj-eng-1">
+              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              Backend Hosting &amp; CI/CD Setup
+            </button>
+            <div class="stack-dropdown" id="proj-eng-1" hidden>this is the content for dropdown</div>
+          </article>
+          <article class="panel stack-item has-dropdown">
+            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="proj-eng-2">
+              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              Incomplete Backend Dependency
+            </button>
+            <div class="stack-dropdown" id="proj-eng-2" hidden>this is the content for dropdown</div>
+          </article>
+          <article class="panel stack-item has-dropdown">
+            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="proj-eng-3">
+              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              Django REST Framework + FastAPI Integration
+            </button>
+            <div class="stack-dropdown" id="proj-eng-3" hidden>this is the content for dropdown</div>
+          </article>
+          <article class="panel stack-item has-dropdown">
+            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="proj-eng-4">
+              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              Ethical Chatbot Constraints
+            </button>
+            <div class="stack-dropdown" id="proj-eng-4" hidden>this is the content for dropdown</div>
+          </article>
         </div>
           </section>
 
@@ -200,6 +224,24 @@
       );
 
       sections.forEach((section) => observer.observe(section));
+    })();
+
+    (() => {
+      const toggles = Array.from(document.querySelectorAll(".stack-toggle"));
+
+      toggles.forEach((toggle) => {
+        toggle.addEventListener("click", () => {
+          const targetId = toggle.getAttribute("aria-controls");
+          const content = targetId ? document.getElementById(targetId) : null;
+          const expanded = toggle.getAttribute("aria-expanded") === "true";
+          const nextState = !expanded;
+
+          toggle.setAttribute("aria-expanded", String(nextState));
+          if (content) {
+            content.hidden = !nextState;
+          }
+        });
+      });
     })();
   </script>
 </body>
