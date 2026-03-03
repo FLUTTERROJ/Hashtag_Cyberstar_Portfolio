@@ -150,6 +150,7 @@ h3 {
 
 .content-layout {
   margin-top: 2rem;
+  padding-inline: clamp(0.5rem, 1.8vw, 1.8rem);
 }
 
 .content-main > section {
@@ -350,6 +351,7 @@ h3 {
   .content-layout {
     margin-top: 1.3rem;
     gap: 1rem;
+    padding-inline: clamp(0.35rem, 3vw, 1rem);
   }
 
   .content-main > section {
@@ -368,6 +370,7 @@ h3 {
     display: grid;
     gap: 2.2rem;
     align-items: start;
+    padding-inline: clamp(1rem, 2.4vw, 2.8rem);
   }
 
   .toc {
