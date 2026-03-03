@@ -303,12 +303,12 @@ h3 {
 .stack-dropdown {
   padding: 0 0.95rem 0.86rem 2rem;
   font-size: clamp(0.84rem, 0.96vw, 0.94rem);
-  line-height: 1.42;
+  line-height: 1.55;
   color: #8dd7e6;
 }
 
 .stack-dropdown p + p {
-  margin-top: 0.35rem;
+  margin-top: 0.55rem;
 }
 
 .dropdown-icon {

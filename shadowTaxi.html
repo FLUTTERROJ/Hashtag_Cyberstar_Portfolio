@@ -144,10 +144,46 @@
         <h3>Failures &amp; Challenges</h3>
         <p class="lead">Things that broke before they worked.</p>
         <div class="stack-list">
-          <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Early state model missed edge cancellation paths</article>
-          <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Operator alert noise required threshold tuning</article>
-          <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Latency spikes exposed weak retry handling</article>
-          <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Initial UI overloaded users with internal detail</article>
+          <article class="panel stack-item has-dropdown">
+            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="shadow-fail-1">
+              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              Collision Accuracy Issues
+            </button>
+            <div class="stack-dropdown" id="shadow-fail-1" hidden>
+              <p>Initially, collision detection was imprecise, causing unfair damage or missed collisions.</p>
+              <p>Required refining bounding logic for taxis and traffic vehicles.</p>
+            </div>
+          </article>
+          <article class="panel stack-item has-dropdown">
+            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="shadow-fail-2">
+              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              Balancing Difficulty &amp; Scoring
+            </button>
+            <div class="stack-dropdown" id="shadow-fail-2" hidden>
+              <p>Early versions either made the game too easy or punishing.</p>
+              <p>Iterative adjustments were needed to make distance-based scoring and damage fair yet challenging.</p>
+            </div>
+          </article>
+          <article class="panel stack-item has-dropdown">
+            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="shadow-fail-3">
+              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              Power-Up Implementation Complexity
+            </button>
+            <div class="stack-dropdown" id="shadow-fail-3" hidden>
+              <p>Integrating temporary effects (defense, speed) without breaking gameplay flow was tricky.</p>
+              <p>Ensured timing, stacking, and visual feedback worked consistently.</p>
+            </div>
+          </article>
+          <article class="panel stack-item has-dropdown">
+            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="shadow-fail-4">
+              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              Real-Time Game Loop Performance
+            </button>
+            <div class="stack-dropdown" id="shadow-fail-4" hidden>
+              <p>Managing multiple entities and updates led to occasional frame drops.</p>
+              <p>Optimized loop and entity updates to maintain smooth, responsive gameplay.</p>
+            </div>
+          </article>
         </div>
           </section>
 
@@ -155,12 +191,12 @@
         <h3>Quality &amp; Reliability</h3>
         <p class="lead">Production-readiness checks.</p>
         <div class="chip-grid quality-grid">
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Lint / formatting</h4><p>Automated checks in commit hooks.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Type safety</h4><p>Strict contracts for trip state APIs.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Unit tests</h4><p>State transitions and validator rules.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Integration tests</h4><p>End-to-end route lifecycle checks.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Observability</h4><p>Trip logs and incident traceability.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Security</h4><p>Role-based access and safe defaults.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Modular Class Design</h4><p>Separated logic, rendering, and input for easier maintenance.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Entity-Based Architecture</h4><p>Independent entities reduced unintended interactions.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Real-Time Collision & Damage Handling</h4><p>Accurate collisions ensured consistent gameplay responses.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Central Game Loop Management</h4><p>Controlled all updates for smooth, predictable performance.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Visual & Gameplay Feedback</h4><p>Clear feedback helped players understand consequences.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Iterative Testing & Optimization</h4><p>Regular debugging balanced gameplay and improved reliability.</p></article>
         </div>
           </section>
         </div>
