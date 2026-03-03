@@ -25,7 +25,8 @@
     <main class="container">
       <section class="title-block">
         <h2>Traffic Sign Prediction</h2>
-        <p>A computer vision project to classify traffic signs with high precision under noisy, real-world conditions.</p>
+        <p>The project focuses on building a traffic sign classification system using a subset of the German Traffic Sign Recognition Benchmark (GTSRB) dataset. The dataset contains images of 43 different traffic signs, including regulatory signs (e.g., speed limits), warning signs (e.g., curves, slippery roads), and mandatory instruction signs (e.g., turn left, go straight).</p>
+        <p>The goal of the project is to accurately classify these signs under real-world conditions, including variations in lighting, angles, and partial occlusions. The project pipeline involves feature extraction, preprocessing, model training, and evaluation, with the final step being an ensemble classifier that combines Decision Tree, SVM, and Linear Regression models, using a Decision Tree as the meta-model for aggregation.</p>
       </section>
 
       <section class="hero-shot">
@@ -36,42 +37,41 @@
         <div class="content-main">
           <section id="problem">
             <h3>Problem &amp; Context</h3>
-            <p class="lead">Road-sign recognition must be fast, robust, and consistent.</p>
+            <p class="lead">Why it mattered and constraints that shape the build.</p>
             <div class="two-col">
-              <p>Traffic scenes include blur, occlusion, and lighting variance, which can reduce model reliability in deployment.</p>
-              <p>The objective was to build a lean predictor that remains stable across common environmental distortions.</p>
-              <p>Constraints included limited training time and balancing inference speed against classification accuracy.</p>
-              <p>The project centered on practical performance, not only benchmark scores.</p>
+              <p>Traffic sign recognition is a key task for autonomous driving and advanced driver-assistance systems (ADAS). Vehicles must correctly interpret signs to navigate safely, but real-world conditions like changing lighting, camera angles, occlusions, and busy backgrounds make classification challenging.</p>
+              <p>This project uses a subset of the German Traffic Sign Recognition Benchmark (GTSRB) dataset, which includes 43 classes of signs, such as regulatory, warning, and mandatory instruction signs. The dataset is split into a labeled training set and an unlabeled test set for evaluation.</p>
+              <p>In addition to images, pre-extracted features are provided, including color histograms, HOG descriptors reduced via PCA, and features like edge density, texture variance, and average color channels. The project also involved engineering additional features and applying preprocessing to improve model performance.</p>
+              <p>Models implemented include Decision Tree, Support Vector Machine (SVM), and Linear Regression, combined into an ensemble model using a Decision Tree as the meta-classifier. The project included training and evaluation on the labeled data, followed by predicting labels for the test set, providing a complete pipeline for robust traffic sign classification.</p>
             </div>
           </section>
 
           <section id="solution">
         <h3>Solution Overview</h3>
-        <p class="lead">Training and inference pipeline highlights.</p>
+        <p class="lead">Key features and the core workflow.</p>
         <div class="chip-grid">
-          <article class="panel">Dataset normalization and augmentation for robustness.</article>
-          <article class="panel">CNN baseline with progressive architecture tuning.</article>
-          <article class="panel">Class-balance handling to reduce minority class misses.</article>
-          <article class="panel">Validation diagnostics by confusion matrix and per-class F1.</article>
-          <article class="panel">Inference wrapper with consistent preprocessing rules.</article>
-          <article class="panel">Model packaging for reproducible evaluation runs.</article>
+          <article class="panel">Feature extraction from images and provided numerical features.</article>
+          <article class="panel">Feature engineering with normalization, missing value handling, and additional metrics.</article>
+          <article class="panel">Decision Tree, SVM, and Linear Regression classifiers implemented independently.</article>
+          <article class="panel">Ensemble model using Decision Tree as the meta-classifier.</article>
+          <article class="panel">Training and cross-validation on labeled dataset for performance optimization.</article>
+          <article class="panel">Predictions generated on unlabeled test set for final evaluation.</article>
         </div>
           </section>
 
           <section id="architecture">
         <h3>Architecture</h3>
-        <p class="lead">High-level components of the ML workflow.</p>
+        <p class="lead">High-level system boundaries and tradeoffs.</p>
         <div class="arch-wrap">
           <div class="panel arch-box">
             <span>Python</span>
             <span>PyTorch</span>
-            <span>OpenCV</span>
             <span>NumPy</span>
           </div>
           <ul>
-            <li>Separated data prep, training, and inference modules.</li>
-            <li>Versioned experiments for hyperparameter comparison.</li>
-            <li>Export path for lightweight runtime deployment.</li>
+            <li>Preprocessing and feature engineering for normalization, missing values, and additional metrics.</li>
+            <li>Training and evaluation pipeline with cross-validation and hyperparameter tuning.</li>
+            <li>Ensemble classification combining Decision Tree, SVM, and Linear Regression predictions.</li>
           </ul>
         </div>
           </section>
@@ -83,66 +83,115 @@
           <article class="panel stack-item has-dropdown">
             <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="tsp-eng-1">
               <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
-              Balanced augmentation over aggressive synthetic distortion
+              Use of Multiple Machine Learning Models
             </button>
-            <div class="stack-dropdown" id="tsp-eng-1" hidden>this is the content for dropdown</div>
+            <div class="stack-dropdown" id="tsp-eng-1" hidden>
+              <p>Implemented Decision Tree, SVM, and Linear Regression</p>
+              <p>Captures complementary strengths of different algorithms.</p>
+            </div>
           </article>
           <article class="panel stack-item has-dropdown">
             <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="tsp-eng-2">
               <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
-              Smaller model variant for predictable inference latency
+              Ensemble Learning with Decision Tree Meta-Classifier
             </button>
-            <div class="stack-dropdown" id="tsp-eng-2" hidden>this is the content for dropdown</div>
+            <div class="stack-dropdown" id="tsp-eng-2" hidden>
+              <p>Combines predictions of base models.</p>
+              <p>Improves robustness and overall accuracy.</p>
+              <p>Reduces errors on difficult traffic sign classes.</p>
+            </div>
           </article>
           <article class="panel stack-item has-dropdown">
             <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="tsp-eng-3">
               <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
-              Early stopping based on validation plateau
+              Feature Engineering and Preprocessing
             </button>
-            <div class="stack-dropdown" id="tsp-eng-3" hidden>this is the content for dropdown</div>
+            <div class="stack-dropdown" id="tsp-eng-3" hidden>
+              <p>Normalization of numerical features.</p>
+              <p>Handling missing values.</p>
+              <p>Additional metrics like edge density, texture variance, and color channels.</p>
+              <p>Enhances model generalization and stability.</p>
+            </div>
           </article>
           <article class="panel stack-item has-dropdown">
             <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="tsp-eng-4">
               <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
-              Simple API wrapper for model serving demonstrations
+              Cross-Validation for Training and Evaluation
             </button>
-            <div class="stack-dropdown" id="tsp-eng-4" hidden>this is the content for dropdown</div>
+            <div class="stack-dropdown" id="tsp-eng-4" hidden>
+              <p>Splitting training data for validation.</p>
+              <p>Hyperparameter tuning.</p>
+              <p>Prevents overfitting.</p>
+              <p>Ensures reliable performance on unseen test data.</p>
+            </div>
           </article>
         </div>
           </section>
 
           <section id="timeline">
         <h3>Timeline &amp; Scope</h3>
-        <p class="lead">From dataset prep to deployable predictor.</p>
+        <p class="lead">How the project moved from discovery to launch.</p>
         <div class="mini-cards">
-          <article class="panel"><h4>DATA</h4><p>Cleanup, split, augment.</p></article>
-          <article class="panel"><h4>TRAIN</h4><p>Baseline and tuning cycles.</p></article>
-          <article class="panel"><h4>EVAL</h4><p>Per-class error analysis.</p></article>
-          <article class="panel"><h4>SERVE</h4><p>Inference interface + docs.</p></article>
+          <article class="panel"><h4>Data Exploration</h4><p>Analyzed images and features + identified preprocessing + additional feature needs.</p></article>
+          <article class="panel"><h4>Preprocessing</h4><p>Normalized data + handled missing values + engineered extra metrics.</p></article>
+          <article class="panel"><h4>Modeling</h4><p>Built Decision Tree + SVM + Linear Regression, + combined in an ensemble.</p></article>
+          <article class="panel"><h4>Evaluation</h4><p>Cross-validated models + tuned hyperparameters + predicted test labels.</p></article>
         </div>
           </section>
 
           <section id="fails">
         <h3>Failures &amp; Challenges</h3>
-        <p class="lead">Where iteration was required.</p>
+        <p class="lead">What did not work first and what changed.</p>
         <div class="stack-list">
-          <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Over-augmentation initially reduced real-scene accuracy</article>
-          <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Minority classes suffered without weighted loss tuning</article>
-          <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Input resizing assumptions caused early misclassification spikes</article>
-          <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Inference benchmark varied across hardware targets</article>
+          <article class="panel stack-item has-dropdown">
+            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="tsp-fail-1">
+              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              Feature Limitations
+            </button>
+            <div class="stack-dropdown" id="tsp-fail-1" hidden>
+              <p>Pre-extracted features were sometimes insufficient, requiring additional feature engineering.</p>
+            </div>
+          </article>
+          <article class="panel stack-item has-dropdown">
+            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="tsp-fail-2">
+              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              Model Performance Variability
+            </button>
+            <div class="stack-dropdown" id="tsp-fail-2" hidden>
+              <p>Individual models (Decision Tree, SVM, Linear Regression) had inconsistent accuracy across classes.</p>
+            </div>
+          </article>
+          <article class="panel stack-item has-dropdown">
+            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="tsp-fail-3">
+              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              Class Imbalance
+            </button>
+            <div class="stack-dropdown" id="tsp-fail-3" hidden>
+              <p>Some traffic sign classes had very few samples, causing higher error rates for minority classes.</p>
+            </div>
+          </article>
+          <article class="panel stack-item has-dropdown">
+            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="tsp-fail-4">
+              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              Hyperparameter Tuning Complexity
+            </button>
+            <div class="stack-dropdown" id="tsp-fail-4" hidden>
+              <p>Finding optimal settings for multiple models and the ensemble required iterative experimentation.</p>
+            </div>
+          </article>
         </div>
           </section>
 
           <section id="quality">
         <h3>Quality &amp; Reliability</h3>
-        <p class="lead">Checks performed before finalizing model outputs.</p>
+        <p class="lead">Production checklist with evidence.</p>
         <div class="chip-grid quality-grid">
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Data hygiene</h4><p>Duplicate and corrupt sample filtering.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Reproducibility</h4><p>Seeded runs and tracked experiment configs.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Validation metrics</h4><p>Accuracy, F1, and class-level recall checks.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Inference checks</h4><p>Latency and confidence consistency tests.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Error review</h4><p>Misclassified samples grouped by failure mode.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Documentation</h4><p>Usage notes and model limitations captured.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Modular Feature Pipeline</h4><p>Separate modules for preprocessing, feature engineering, and additional metric generation.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Multiple Model Implementation</h4><p>Independent Decision Tree, SVM, and Linear Regression models ensure robust evaluation.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Ensemble Learning</h4><p>Combines multiple models using a Decision Tree meta-classifier to improve overall accuracy.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Cross-Validation</h4><p>Reliable performance assessment and hyperparameter tuning on training data.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Error Analysis & Class Handling</h4><p>Monitored minority classes and misclassifications to refine features and models.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Reproducible Pipeline</h4><p>Consistent preprocessing, training, and prediction steps for repeatable results on new data.</p></article>
         </div>
           </section>
         </div>
