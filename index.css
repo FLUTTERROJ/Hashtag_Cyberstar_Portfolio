@@ -388,7 +388,8 @@ a {
   .contact-panel {
     margin-left: 1rem;
     margin-right: 1rem;
-    padding-left: var(--page-gutter);`r`n    padding-right: var(--page-gutter);
+    padding-left: var(--page-gutter);
+    padding-right: var(--page-gutter);
   }
 
   .main-nav {
@@ -408,6 +409,9 @@ a {
     bottom: 1.6rem;
   }
 }
+
+
+
 
 
 
