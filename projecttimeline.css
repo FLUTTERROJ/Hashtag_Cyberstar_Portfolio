@@ -139,10 +139,59 @@ a {
   left: 50%;
   top: 0;
   transform: translateX(-50%);
-  width: 7px;
+  width: 8px;
   height: 100%;
-  background: linear-gradient(var(--line), var(--line-pink) 52%, var(--line));
-  box-shadow: 0 0 18px rgba(56, 185, 255, 0.65);
+  border-radius: 999px;
+  background: linear-gradient(
+    to bottom,
+    rgba(88, 208, 255, 0.1) 0%,
+    #66d7ff 12%,
+    #2fa8ff 28%,
+    #40bdff 45%,
+    #cc7cff 62%,
+    #8ea1ff 79%,
+    #c37dff 100%
+  );
+  box-shadow:
+    0 0 12px rgba(90, 198, 255, 0.75),
+    0 0 24px rgba(71, 151, 255, 0.45),
+    0 0 34px rgba(183, 100, 255, 0.3);
+}
+
+.center-line::before,
+.center-line::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.center-line::before {
+  top: 0;
+  width: 18px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(90, 198, 255, 0.16) 8%,
+    rgba(70, 139, 255, 0.1) 48%,
+    rgba(194, 108, 255, 0.14) 100%
+  );
+  filter: blur(3px);
+}
+
+.center-line::after {
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(219, 246, 255, 0.88),
+    rgba(215, 236, 255, 0.96) 40%,
+    rgba(255, 232, 255, 0.86) 68%,
+    rgba(222, 222, 255, 0.8)
+  );
 }
 
 .hero-node,
@@ -182,7 +231,7 @@ a {
 .timeline-card {
   position: absolute;
   width: min(480px, 43vw);
-  height: clamp(210px, 24vw, 270px);
+  height: clamp(250px, 28vw, 340px);
   overflow: hidden;
   perspective: 1400px;
   transform-style: preserve-3d;
@@ -264,9 +313,9 @@ a {
   visibility: hidden;
   pointer-events: none;
   z-index: 3;
-  display: grid;
-  align-content: start;
-  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
   transform: translateZ(1px);
 }
 
@@ -290,7 +339,7 @@ a {
 }
 
 .card-back a {
-  margin-top: 0.45rem;
+  margin-top: auto;
   display: inline-block;
   border: 3px solid rgba(74, 126, 242, 0.85);
   border-radius: 10px;
@@ -357,7 +406,7 @@ a {
     left: 50%;
     right: auto;
     transform: translateX(-50%);
-    height: 250px;
+    height: 300px;
   }
 
   .timeline-card.right,

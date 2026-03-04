@@ -25,7 +25,9 @@
     <main class="container">
       <section class="title-block">
         <h2>Support Atlas</h2>
-        <p>This project is a web-based mental health support platform designed to make professional help more accessible.</p>
+        <p>This project is a web-based mental health support platform designed to make professional help more accessible. The website serves as a centralized hub where users can explore various mental health services and use a chatbot interface to locate the nearest relevant support options based on their location.
+
+</p>
       </section>
 
       <section class="hero-shot">
@@ -38,10 +40,15 @@
             <h3>Problem &amp; Context</h3>
             <p class="lead">Why it mattered and constraints that shape the build.</p>
             <div class="two-col">
-              <p>Finding mental health support can be overwhelming, especially during moments of distress. Existing directories are often too broad or disconnected, delaying access when users need immediate help.</p>
-              <p>I scoped the build to solve one major bottleneck: connecting users quickly with relevant support based on location and need.</p>
-              <p>A key limitation was the private nature of health data and service boundaries. Integration into live systems required careful privacy design.</p>
-              <p>Balancing speed, trust, and clarity drove the architecture and product choices throughout implementation.</p>
+              <p>Finding mental health support can be overwhelming, especially during moments of distress. Information about available services is often scattered across different platforms, making it difficult for users to quickly identify reliable and nearby support. Additionally, AI tools that attempt to provide direct mental health advice raise ethical and safety concerns.</p>
+              <p>This project aimed to create a centralized platform that simplifies access to mental health services. Instead of offering clinical advice, the chatbot guides users toward verified services and helps them find the nearest support options based on their location.</p>
+              <ul class="context-points">
+                <li>A central hub listing various mental health services (hotlines, counseling centers, clinics, crisis support)</li>
+                <li>A user-friendly, low-friction platform that simplifies help-seeking behavior</li>
+                <li>Designing a calm, reassuring interface suitable for sensitive contexts</li>
+                <li>A location-aware chatbot interface that helps users identify the nearest relevant service</li>
+                <li>Ensuring the chatbot does not provide clinical diagnosis or therapy</li>
+              </ul>
             </div>
           </section>
 
@@ -49,12 +56,12 @@
         <h3>Solution Overview</h3>
         <p class="lead">Key features and the core workflow.</p>
         <div class="chip-grid">
-          <article class="panel">Structured service search with location-aware results.</article>
-          <article class="panel">Conversation intake to guide users toward safer options.</article>
-          <article class="panel">Fast, focused summaries that reduce cognitive load.</article>
-          <article class="panel">Simple route model designed for iterative scaling.</article>
-          <article class="panel">Clear handoff paths from app guidance to external services.</article>
-          <article class="panel">Built for maintainability with typed APIs and logs.</article>
+          <article class="panel">Structured and verified directory that consolidates mental health services — including hotlines, counseling centers, and clinics — into one accessible platform.</article>
+          <article class="panel">A conversational interface that helps users quickly identify relevant support options. The chatbot does not provide clinical advice, but instead directs users to appropriate services.</article>
+          <article class="panel">A discreet “Quick Leave” feature that allows users to instantly redirect the site if someone approaches them, particularly for users seeking help in sensitive environments.</article>
+          <article class="panel">An integrated map that detects the user’s location and displays the nearest mental health services, including distance, contact details, and directions.</article>
+          <article class="panel">Comprehensive accessibility modes including Easy Mode, Reduced Motion, Large Text Mode, Dyslexia-Friendly Mode, High Contrast and and Screen Reader Assist to ensure inclusivity</article>
+          <article class="panel">A clean, minimal interface designed to reduce cognitive overload, promote clarity, and create a safe digital environment for users seeking support.</article>
         </div>
           </section>
 
@@ -63,15 +70,16 @@
         <p class="lead">High-level system boundaries and tradeoffs.</p>
         <div class="arch-wrap">
           <div class="panel arch-box">
-            <span>React App</span>
+            <span>Next.js App Router </span>
             <span>FastAPI</span>
-            <span>Postgres</span>
-            <span>OpenAI API</span>
+            <span>Dango ORM</span>
+            <span>Supabase</span>
           </div>
           <ul>
-            <li>Clear separation between UI, API, and data layers.</li>
-            <li>Postgres chosen for structured records and future analytics.</li>
-            <li>Typed interfaces reduce regressions across integrations.</li>
+            <li>Fixed stack: Next.js App Router + TypeScript + FastAPI</li>
+            <li>DB + ORM: Django + Supabase for OAuth</li>
+            <li>Auth: GitHub OAuth + Goggle OAuth</li>
+            <li>Route handlers for explicit HTTP boundaries and consistent error schemas.</li>
           </ul>
         </div>
           </section>
@@ -115,10 +123,10 @@
         <h3>Timeline &amp; Scope</h3>
         <p class="lead">How the project moved from discovery to launch.</p>
         <div class="mini-cards">
-          <article class="panel"><h4>SCAFFOLD</h4><p>Repo setup and models.</p></article>
-          <article class="panel"><h4>COLLAB</h4><p>Backlog, alignment, iterations.</p></article>
+          <article class="panel"><h4>SCAFFOLD</h4><p>Monorepo + shared config + UI package.</p></article>
+          <article class="panel"><h4>COLLAB</h4><p>Roles, invites, labels, assignees, comments, mentions.</p></article>
           <article class="panel"><h4>CORE</h4><p>API, frontend wiring, CI.</p></article>
-          <article class="panel"><h4>OPS</h4><p>Hosting, observability, docs.</p></article>
+          <article class="panel"><h4>OPS</h4><p>health/version, integration/E2E pipeline, Hosting, docs</p></article>
         </div>
           </section>
 
@@ -137,14 +145,14 @@
         <h3>Quality &amp; Reliability</h3>
         <p class="lead">Production checklist with evidence.</p>
         <div class="chip-grid quality-grid">
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Lint / formatting</h4><p>ESLint + Prettier + Black in pre-commit.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Type safety</h4><p>Typed API contracts and schema checks.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Unit tests</h4><p>Validation and endpoint coverage.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Integration tests</h4><p>API flows with seeded fixtures.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Observability</h4><p>Health checks, logs, and request traces.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Accessibility</h4><p>Semantic structure and keyboard checks.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">CI smoke</h4><p>Playwright smoke checks before merge.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Security</h4><p>Boundary checks and safe defaults.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Lint / formatting</h4><p>ESLint + Prettier + Husky + lint-staged.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Type safety</h4><p>TypeScript + Zod validation on request bodies.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Unit tests</h4><p>Validators, RBAC helpers, mention parsing, rate limiting.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Integration tests</h4><p>API flows with FastAPI + Django.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Observability</h4><p>/api/health, /api/version, structured logs.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Accessibility</h4><p>Large icon mode, Dyslexia mode, reduced motion support.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">E2E smoke</h4><p>Playwright test-auth flow in CI.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Security</h4><p>Security headers + rate limiting + consistent errors.</p></article>
         </div>
           </section>
 

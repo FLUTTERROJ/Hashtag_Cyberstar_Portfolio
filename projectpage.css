@@ -116,7 +116,7 @@ h3 {
 }
 
 .lead {
-  color: var(--text-soft);
+  color: #d068c8;
   font-size: clamp(0.85rem, 1.1vw, 1rem);
   margin-top: 0.35rem;
   line-height: 1.45;
@@ -170,6 +170,23 @@ h3 {
 .two-col p {
   font-size: clamp(0.9rem, 1vw, 1.02rem);
   line-height: 1.5;
+}
+
+.context-points {
+  grid-column: 1 / -1;
+  list-style: disc;
+  padding-left: 1.35rem;
+  margin-top: 0.35rem;
+}
+
+.context-points li {
+  font-size: clamp(0.98rem, 1.15vw, 1.12rem);
+  line-height: 1.45;
+  margin-bottom: 1.15rem;
+}
+
+.context-points li:last-child {
+  margin-bottom: 0;
 }
 
 .panel {
