@@ -177,6 +177,7 @@ h3 {
 }
 
 .title-block .overview-intro {
+  margin-top: 0.5rem;
   max-width: 82ch;
   line-height: 1.55;
 }
