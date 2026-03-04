@@ -259,6 +259,23 @@
         setCurrent(sections[0].id);
       }
 
+      links.forEach((link) => {
+        link.addEventListener("click", (event) => {
+          const hash = link.getAttribute("href");
+          if (!hash || !hash.startsWith("#")) return;
+
+          const target = document.querySelector(hash);
+          if (!target) return;
+
+          event.preventDefault();
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+
+          if (history.replaceState) {
+            history.replaceState(null, "", hash);
+          }
+        });
+      });
+
       const observer = new IntersectionObserver(
         (entries) => {
           const visible = entries
