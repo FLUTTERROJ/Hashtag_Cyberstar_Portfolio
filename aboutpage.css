@@ -48,8 +48,8 @@ a {
 .container {
   width: min(1500px, 100%);
   margin: 0 auto;
-  padding-left: clamp(3rem, 6.5vw, 12.5rem);
-  padding-right: clamp(3rem, 6.5vw, 12.5rem);
+  padding-left: clamp(4.5rem, 9.75vw, 18.75rem);
+  padding-right: clamp(4.5rem, 9.75vw, 18.75rem);
 }
 
 .site-header,
@@ -367,4 +367,5 @@ a {
     font-size: 1.12rem;
   }
 }
+
 

@@ -7,6 +7,7 @@
   --purple-line: #3e3d93;
   --pink: #d068c8;
   --text: #8ad5e4;
+  --page-gutter: clamp(4.5rem, 9.75vw, 18.75rem);
 }
 
 * {
@@ -54,7 +55,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0.9rem;
+  padding: 1rem var(--page-gutter);
 }
 
 .logo {
@@ -217,7 +218,7 @@ a {
 
 .lanes {
   background: var(--bg-panel);
-  padding: 2rem 2.8rem 2.8rem;
+  padding: 2rem var(--page-gutter) 2.8rem;
 }
 
 .lanes h2 {
@@ -263,7 +264,7 @@ a {
 
 .contact-panel {
   background: var(--bg-panel);
-  margin: 0 2.8rem 2.2rem;
+  margin: 0 var(--page-gutter) 2.2rem;
   padding: 1.25rem 1.2rem;
   border: 3px solid var(--purple-line);
   border-radius: 28px;
@@ -387,8 +388,7 @@ a {
   .contact-panel {
     margin-left: 1rem;
     margin-right: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: var(--page-gutter);`r`n    padding-right: var(--page-gutter);
   }
 
   .main-nav {
@@ -408,3 +408,6 @@ a {
     bottom: 1.6rem;
   }
 }
+
+
+
