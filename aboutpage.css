@@ -154,19 +154,19 @@ a {
 }
 
 .intro h2 {
-  font: 600 clamp(2.1rem, 3.1vw, 3rem) "Rajdhani", sans-serif;
+  font: 600 clamp(1.85rem, 2.75vw, 2.6rem) "Rajdhani", sans-serif;
 }
 
 .intro h3 {
   margin-top: 0.1rem;
-  font-size: clamp(1.5rem, 2.2vw, 2.8rem);
+  font-size: clamp(1.3rem, 1.95vw, 2.4rem);
   color: var(--text-soft);
 }
 
 .intro p {
   margin-top: 0.35rem;
   max-width: 70ch;
-  font-size: clamp(1rem, 1.4vw, 1.9rem);
+  font-size: clamp(0.9rem, 1.2vw, 1.55rem);
 }
 
 .core-grid,
@@ -190,7 +190,7 @@ a {
 .identity-card h4,
 .values-card h4,
 .toolkit-card h4 {
-  font: 600 clamp(1.8rem, 2.4vw, 2.6rem) "Rajdhani", sans-serif;
+  font: 600 clamp(1.55rem, 2.1vw, 2.2rem) "Rajdhani", sans-serif;
 }
 
 .avatar-shell {
@@ -201,14 +201,18 @@ a {
   border: 2px solid rgba(181, 208, 255, 0.74);
   display: grid;
   place-items: center;
-  font-size: clamp(1.4rem, 2vw, 2.8rem);
+  font-size: clamp(1.2rem, 1.75vw, 2.4rem);
   color: #d7d8e1;
 }
 
 .identity-card p {
   max-width: 30ch;
-  font-size: clamp(1.2rem, 1.4vw, 1.9rem);
+  font-size: clamp(1rem, 1.2vw, 1.55rem);
   line-height: 1.22;
+}
+
+.identity-card p + p {
+  margin-top: 0.65rem;
 }
 
 .timeline-card {
@@ -236,13 +240,13 @@ a {
 }
 
 .timeline h5 {
-  font-size: clamp(1.25rem, 1.45vw, 1.95rem);
+  font-size: clamp(1.08rem, 1.25vw, 1.65rem);
   line-height: 1.15;
 }
 
 .timeline .org,
 .timeline .date {
-  font-size: clamp(1.08rem, 1.2vw, 1.55rem);
+  font-size: clamp(0.95rem, 1.05vw, 1.3rem);
 }
 
 .timeline .date {
@@ -253,7 +257,7 @@ a {
 }
 
 .timeline .desc {
-  font-size: clamp(1rem, 1.2vw, 1.45rem);
+  font-size: clamp(0.88rem, 1.02vw, 1.2rem);
   max-width: 65ch;
   line-height: 1.2;
   color: #b66fd8;
@@ -268,7 +272,11 @@ a {
   margin-top: 0.7rem;
   padding-left: 1rem;
   line-height: 1.42;
-  font-size: clamp(1.25rem, 1.5vw, 2rem);
+  font-size: clamp(1.08rem, 1.3vw, 1.65rem);
+}
+
+.values-card ul li {
+  color: #d068c8;
 }
 
 .pill-wrap {
@@ -283,7 +291,7 @@ a {
   color: #b66fd8;
   border-radius: 999px;
   padding: 0.16rem 0.8rem;
-  font: 700 clamp(1rem, 1.05vw, 1.3rem) "Rajdhani", sans-serif;
+  font: 700 clamp(0.88rem, 0.95vw, 1.12rem) "Rajdhani", sans-serif;
   letter-spacing: 0.04em;
 }
 
@@ -298,14 +306,14 @@ a {
 }
 
 .cta-bar p {
-  font-size: clamp(1.35rem, 2vw, 2.7rem);
+  font-size: clamp(1.15rem, 1.7vw, 2.2rem);
 }
 
 .cta-bar a {
   border: 2px solid #4f55b8;
   border-radius: 999px;
   padding: 0.4rem 1.35rem;
-  font: 700 clamp(1.15rem, 1.3vw, 1.7rem) "Rajdhani", sans-serif;
+  font: 700 clamp(1rem, 1.12vw, 1.45rem) "Rajdhani", sans-serif;
   color: #b66fd8;
   min-width: 170px;
   text-align: center;
