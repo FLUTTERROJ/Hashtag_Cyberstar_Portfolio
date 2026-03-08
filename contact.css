@@ -76,7 +76,7 @@ a {
   display: flex;
   gap: 1.3rem;
   flex-wrap: wrap;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Roboto Slab", serif;
   font-size: 1.6rem;
   font-weight: 700;
 }
@@ -377,6 +377,7 @@ a {
     font-size: 1.12rem;
   }
 }
+
 
 
 
