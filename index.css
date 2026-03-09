@@ -435,6 +435,10 @@ main {
     width: 100%;
     border: none;
   }
+  
+  :root{
+    --page-gutter: 1rem;
+  }
 
   main {
     padding-left: 1rem;
