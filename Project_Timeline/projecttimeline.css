@@ -513,6 +513,17 @@ a {
     padding-right: 0;
   }
 
+  /* Show back card by default on mobile since no hover */
+  .timeline-card .card-back {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .timeline-card .card-front {
+    opacity: 0.05;
+  }
+
   .hero h2 {
     font-size: 1.5rem;
   }

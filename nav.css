@@ -1,3 +1,15 @@
+:root {
+  --bg-outer: #d6d6d9;
+  --bg-deep: #010028;
+  --bg-panel: #000033;
+  --cyan: #4ed9e9;
+  --cyan-soft: #6ec8d8;
+  --purple-line: #3e3d93;
+  --pink: #d068c8;
+  --text: #8ad5e4;
+  --page-gutter: clamp(4.5rem, 9.75vw, 18.75rem);
+}
+
 .menu-icon{
   width:30px;
   cursor:pointer;
@@ -5,7 +17,7 @@
   position:absolute;
   right:1rem;
   top:1.4rem;
-  z-index:1001;
+  z-index:10000;
 }
 
 /* Side navigation panel */
@@ -20,7 +32,7 @@
   transition:0.3s;
   padding-top:6rem;
   border-left:3px solid var(--purple-line);
-  z-index:1002;
+  z-index:9999;
 }
 
 /* Links inside panel */
