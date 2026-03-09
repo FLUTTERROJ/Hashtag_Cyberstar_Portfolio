@@ -455,7 +455,7 @@ a {
   }
 
   .timeline {
-    min-height: 1220px;
+    min-height: 1500px;
   }
 
   .timeline-card {
@@ -477,23 +477,23 @@ a {
   }
 
   .timeline-card.left {
-    top: 430px;
+    top: 490px;
   }
 
   .timeline-card.right.lower {
-    top: 720px;
+    top: 840px;
   }
 
   .node-one {
-    top: 386px;
+    top: 516px;
   }
 
   .node-two {
-    top: 676px;
+    top: 866px;
   }
 
   .node-three {
-    top: 964px;
+    top: 1216px;
   }
 }
 
