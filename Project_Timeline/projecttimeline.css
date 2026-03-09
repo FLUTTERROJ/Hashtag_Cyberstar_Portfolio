@@ -313,7 +313,7 @@ a {
 }
 
 .card-front h3 {
-  font: 600 clamp(2.2rem, 3vw, 3rem) "Rajdhani", sans-serif;
+  font: 600 clamp(2rem, 2.5vw, 3rem) "Rajdhani", sans-serif;
   line-height: 0.95;
 }
 
