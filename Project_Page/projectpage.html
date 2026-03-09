@@ -8,18 +8,31 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;500;700&family=Rajdhani:wght@500;600;700&family=Roboto+Slab:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="projectpage.css">
-  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="../nav.css">
 </head>
 <body>
   <div class="canvas">
     <header class="site-header container">
-      <h1 class="logo"><a href="index.html">SUH/\S</a></h1>
+      <h1 class="logo"><a href="../index.html">SUH/\S</a></h1>
+      <!-- Mobile menu button -->
+      <img src="../Assets/Side_panel.png" class="menu-icon" onclick="openNav()" alt="Menu">
+
+      <!-- Side navigation panel -->
+      <div id="sideNav" class="side-nav">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
+        <a href="../index.html">Home</a>
+        <a href="../Project_Timeline/projecttimeline.html">Projects</a>
+        <a href="../About/aboutpage.html">About</a>
+        <a href="../Experiments/felor.html">Experiments</a>
+        <a href="../Contact/contact.html">Contact</a>
+      </div>
+
       <nav class="site-nav" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a class="active" href="projecttimeline.html">Projects</a>
-        <a href="aboutpage.html">About</a>
-        <a href="felor.html">Experiments</a>
-        <a href="contact.html">Contact</a>
+        <a href="../index.html">Home</a>
+        <a class="active" href="../Project_Timeline/projecttimeline.html">Projects</a>
+        <a href="../About/aboutpage.html">About</a>
+        <a href="../Experiments/felor.html">Experiments</a>
+        <a href="../Contact/contact.html">Contact</a>
         <div class="nav-social" aria-label="External links">
           <a class="social-icon" href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -51,13 +64,13 @@
         <div class="project-carousel panel" data-carousel>
           <div class="carousel-stage">
             <figure class="carousel-slide is-active" data-caption="Support Atlas home interface with fast access to trusted support pathways.">
-              <img src="Assets/support-atlas-home.png" alt="Support Atlas home page showing core service discovery flow">
+              <img src="../Assets/support-atlas-home.png" alt="Support Atlas home page showing core service discovery flow">
             </figure>
             <figure class="carousel-slide" data-caption="Accessibility settings including large text and dyslexia-friendly readability modes.">
-              <img src="Assets/support-atlas-accessibility.png" alt="Support Atlas accessibility settings page">
+              <img src="../Assets/support-atlas-accessibility.png" alt="Support Atlas accessibility settings page">
             </figure>
             <figure class="carousel-slide" data-caption="Anonymous chat assistant flow that guides users toward appropriate help options.">
-              <img src="Assets/support-atlas-chat.png" alt="Support Atlas chat interface">
+              <img src="../Assets/support-atlas-chat.png" alt="Support Atlas chat interface">
             </figure>
           </div>
           <div class="carousel-footer">
@@ -133,28 +146,28 @@
         <div class="stack-list">
           <article class="panel stack-item has-dropdown">
             <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="proj-eng-1">
-              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              <img class="dropdown-icon" src="../Assets/DropDown.png" alt="" aria-hidden="true">
               Backend Hosting &amp; CI/CD Setup
             </button>
             <div class="stack-dropdown" id="proj-eng-1" hidden>this is the content for dropdown</div>
           </article>
           <article class="panel stack-item has-dropdown">
             <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="proj-eng-2">
-              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              <img class="dropdown-icon" src="../Assets/DropDown.png" alt="" aria-hidden="true">
               Incomplete Backend Dependency
             </button>
             <div class="stack-dropdown" id="proj-eng-2" hidden>this is the content for dropdown</div>
           </article>
           <article class="panel stack-item has-dropdown">
             <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="proj-eng-3">
-              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              <img class="dropdown-icon" src="../Assets/DropDown.png" alt="" aria-hidden="true">
               Django REST Framework + FastAPI Integration
             </button>
             <div class="stack-dropdown" id="proj-eng-3" hidden>this is the content for dropdown</div>
           </article>
           <article class="panel stack-item has-dropdown">
             <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="proj-eng-4">
-              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              <img class="dropdown-icon" src="../Assets/DropDown.png" alt="" aria-hidden="true">
               Ethical Chatbot Constraints
             </button>
             <div class="stack-dropdown" id="proj-eng-4" hidden>this is the content for dropdown</div>
@@ -177,10 +190,10 @@
         <h3>Failures &amp; Challenges</h3>
         <p class="lead">What did not work first and what changed.</p>
         <div class="stack-list">
-          <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Route handlers were not wired correctly for one CRUD path.</article>
-          <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Validation gaps created edge-case API failures in early testing.</article>
-          <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Auth assumptions were too optimistic for cross-role access.</article>
-          <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Pagination strategy needed refactor to stay fast under load.</article>
+          <article class="panel stack-item"><img class="dropdown-icon" src="../Assets/DropDown.png" alt="" aria-hidden="true">Route handlers were not wired correctly for one CRUD path.</article>
+          <article class="panel stack-item"><img class="dropdown-icon" src="../Assets/DropDown.png" alt="" aria-hidden="true">Validation gaps created edge-case API failures in early testing.</article>
+          <article class="panel stack-item"><img class="dropdown-icon" src="../Assets/DropDown.png" alt="" aria-hidden="true">Auth assumptions were too optimistic for cross-role access.</article>
+          <article class="panel stack-item"><img class="dropdown-icon" src="../Assets/DropDown.png" alt="" aria-hidden="true">Pagination strategy needed refactor to stay fast under load.</article>
         </div>
           </section>
 
@@ -188,14 +201,14 @@
         <h3>Quality &amp; Reliability</h3>
         <p class="lead">Production checklist with evidence.</p>
         <div class="chip-grid quality-grid">
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Lint / formatting</h4><p>ESLint + Prettier + Husky + lint-staged.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Type safety</h4><p>TypeScript + Zod validation on request bodies.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Unit tests</h4><p>Validators, RBAC helpers, mention parsing, rate limiting.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Integration tests</h4><p>API flows with FastAPI + Django.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Observability</h4><p>/api/health, /api/version, structured logs.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Accessibility</h4><p>Large icon mode, Dyslexia mode, reduced motion support.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">E2E smoke</h4><p>Playwright test-auth flow in CI.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Security</h4><p>Security headers + rate limiting + consistent errors.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="../Assets/tick_mark.png" alt="" aria-hidden="true">Lint / formatting</h4><p>ESLint + Prettier + Husky + lint-staged.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="../Assets/tick_mark.png" alt="" aria-hidden="true">Type safety</h4><p>TypeScript + Zod validation on request bodies.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="../Assets/tick_mark.png" alt="" aria-hidden="true">Unit tests</h4><p>Validators, RBAC helpers, mention parsing, rate limiting.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="../Assets/tick_mark.png" alt="" aria-hidden="true">Integration tests</h4><p>API flows with FastAPI + Django.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="../Assets/tick_mark.png" alt="" aria-hidden="true">Observability</h4><p>/api/health, /api/version, structured logs.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="../Assets/tick_mark.png" alt="" aria-hidden="true">Accessibility</h4><p>Large icon mode, Dyslexia mode, reduced motion support.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="../Assets/tick_mark.png" alt="" aria-hidden="true">E2E smoke</h4><p>Playwright test-auth flow in CI.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="../Assets/tick_mark.png" alt="" aria-hidden="true">Security</h4><p>Security headers + rate limiting + consistent errors.</p></article>
         </div>
           </section>
 
@@ -227,13 +240,13 @@
 
     <footer class="site-footer container">
       <div class="footer-top">
-        <h2 class="logo"><a href="index.html">SUH/\S</a></h2>
+        <h2 class="logo"><a href="../index.html">SUH/\S</a></h2>
         <nav class="site-nav" aria-label="Footer">
-          <a href="index.html">Home</a>
-          <a class="active" href="projecttimeline.html">Projects</a>
-          <a href="aboutpage.html">About</a>
-        <a href="felor.html">Experiments</a>
-        <a href="contact.html">Contact</a>
+          <a href="../index.html">Home</a>
+          <a class="active" href="../Project_Timeline/projecttimeline.html">Projects</a>
+          <a href="../About/aboutpage.html">About</a>
+        <a href="../Experiments/felor.html">Experiments</a>
+        <a href="../Contact/contact.html">Contact</a>
           <div class="nav-social" aria-label="External links">
             <a class="social-icon" href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -356,6 +369,7 @@
       });
     })();
   </script>
+  <script src="../nav.js"></script>
 </body>
 </html>
 

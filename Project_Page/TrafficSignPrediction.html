@@ -8,18 +8,31 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;500;700&family=Rajdhani:wght@500;600;700&family=Roboto+Slab:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="projectpage.css">
-  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="../nav.css">
 </head>
 <body>
   <div class="canvas">
     <header class="site-header container">
-      <h1 class="logo"><a href="index.html">SUH/\S</a></h1>
+      <h1 class="logo"><a href="../index.html">SUH/\S</a></h1>
+      <!-- Mobile menu button -->
+      <img src="../Assets/Side_panel.png" class="menu-icon" onclick="openNav()" alt="Menu">
+
+      <!-- Side navigation panel -->
+      <div id="sideNav" class="side-nav">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
+        <a href="../index.html">Home</a>
+        <a href="../Project_Timeline/projecttimeline.html">Projects</a>
+        <a href="../About/aboutpage.html">About</a>
+        <a href="../Experiments/felor.html">Experiments</a>
+        <a href="../Contact/contact.html">Contact</a>
+      </div>
+
       <nav class="site-nav" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a class="active" href="projecttimeline.html">Projects</a>
-        <a href="aboutpage.html">About</a>
-        <a href="felor.html">Experiments</a>
-        <a href="contact.html">Contact</a>
+        <a href="../index.html">Home</a>
+        <a class="active" href="../Project_Timeline/projecttimeline.html">Projects</a>
+        <a href="../About/aboutpage.html">About</a>
+        <a href="../Experiments/felor.html">Experiments</a>
+        <a href="../Contact/contact.html">Contact</a>
         <div class="nav-social" aria-label="External links">
           <a class="social-icon" href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -51,13 +64,13 @@
         <div class="project-carousel panel" data-carousel>
           <div class="carousel-stage">
             <figure class="carousel-slide is-active" data-caption="Class distribution across all 43 traffic sign categories in the training set.">
-              <img src="Assets/traffic-sign-class-distribution.png" alt="Bar chart showing distribution of traffic sign classes">
+              <img src="../Assets/traffic-sign-class-distribution.png" alt="Bar chart showing distribution of traffic sign classes">
             </figure>
             <figure class="carousel-slide" data-caption="Stacking ensemble evaluation with tuned model parameters and confusion matrix analysis.">
-              <img src="Assets/traffic-sign-stacking-results.png" alt="Stacking model metrics and confusion matrix for traffic sign prediction">
+              <img src="../Assets/traffic-sign-stacking-results.png" alt="Stacking model metrics and confusion matrix for traffic sign prediction">
             </figure>
             <figure class="carousel-slide" data-caption="Random Forest benchmark showing strong class-level performance and confusion matrix structure.">
-              <img src="Assets/traffic-sign-random-forest-results.png" alt="Random Forest confusion matrix and evaluation metrics for traffic signs">
+              <img src="../Assets/traffic-sign-random-forest-results.png" alt="Random Forest confusion matrix and evaluation metrics for traffic signs">
             </figure>
           </div>
           <div class="carousel-footer">
@@ -126,7 +139,7 @@
         <div class="stack-list">
           <article class="panel stack-item has-dropdown">
             <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="tsp-eng-1">
-              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              <img class="dropdown-icon" src="../Assets/DropDown.png" alt="" aria-hidden="true">
               Use of Multiple Machine Learning Models
             </button>
             <div class="stack-dropdown" id="tsp-eng-1" hidden>
@@ -136,7 +149,7 @@
           </article>
           <article class="panel stack-item has-dropdown">
             <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="tsp-eng-2">
-              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              <img class="dropdown-icon" src="../Assets/DropDown.png" alt="" aria-hidden="true">
               Ensemble Learning with Decision Tree Meta-Classifier
             </button>
             <div class="stack-dropdown" id="tsp-eng-2" hidden>
@@ -147,7 +160,7 @@
           </article>
           <article class="panel stack-item has-dropdown">
             <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="tsp-eng-3">
-              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              <img class="dropdown-icon" src="../Assets/DropDown.png" alt="" aria-hidden="true">
               Feature Engineering and Preprocessing
             </button>
             <div class="stack-dropdown" id="tsp-eng-3" hidden>
@@ -159,7 +172,7 @@
           </article>
           <article class="panel stack-item has-dropdown">
             <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="tsp-eng-4">
-              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              <img class="dropdown-icon" src="../Assets/DropDown.png" alt="" aria-hidden="true">
               Cross-Validation for Training and Evaluation
             </button>
             <div class="stack-dropdown" id="tsp-eng-4" hidden>
@@ -189,7 +202,7 @@
         <div class="stack-list">
           <article class="panel stack-item has-dropdown">
             <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="tsp-fail-1">
-              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              <img class="dropdown-icon" src="../Assets/DropDown.png" alt="" aria-hidden="true">
               Feature Limitations
             </button>
             <div class="stack-dropdown" id="tsp-fail-1" hidden>
@@ -198,7 +211,7 @@
           </article>
           <article class="panel stack-item has-dropdown">
             <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="tsp-fail-2">
-              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              <img class="dropdown-icon" src="../Assets/DropDown.png" alt="" aria-hidden="true">
               Model Performance Variability
             </button>
             <div class="stack-dropdown" id="tsp-fail-2" hidden>
@@ -207,7 +220,7 @@
           </article>
           <article class="panel stack-item has-dropdown">
             <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="tsp-fail-3">
-              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              <img class="dropdown-icon" src="../Assets/DropDown.png" alt="" aria-hidden="true">
               Class Imbalance
             </button>
             <div class="stack-dropdown" id="tsp-fail-3" hidden>
@@ -216,7 +229,7 @@
           </article>
           <article class="panel stack-item has-dropdown">
             <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="tsp-fail-4">
-              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
+              <img class="dropdown-icon" src="../Assets/DropDown.png" alt="" aria-hidden="true">
               Hyperparameter Tuning Complexity
             </button>
             <div class="stack-dropdown" id="tsp-fail-4" hidden>
@@ -230,12 +243,12 @@
         <h3>Quality &amp; Reliability</h3>
         <p class="lead">Production checklist with evidence.</p>
         <div class="chip-grid quality-grid">
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Modular Feature Pipeline</h4><p>Separate modules for preprocessing, feature engineering, and additional metric generation.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Multiple Model Implementation</h4><p>Independent Decision Tree, Random Forest, SVM, and Linear Regression models ensure robust evaluation.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Ensemble Learning</h4><p>Combines multiple models using a Decision Tree meta-classifier to improve overall accuracy.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Cross-Validation</h4><p>Reliable performance assessment and hyperparameter tuning on training data.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Error Analysis & Class Handling</h4><p>Monitored minority classes and misclassifications to refine features and models.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Reproducible Pipeline</h4><p>Consistent preprocessing, training, and prediction steps for repeatable results on new data.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="../Assets/tick_mark.png" alt="" aria-hidden="true">Modular Feature Pipeline</h4><p>Separate modules for preprocessing, feature engineering, and additional metric generation.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="../Assets/tick_mark.png" alt="" aria-hidden="true">Multiple Model Implementation</h4><p>Independent Decision Tree, Random Forest, SVM, and Linear Regression models ensure robust evaluation.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="../Assets/tick_mark.png" alt="" aria-hidden="true">Ensemble Learning</h4><p>Combines multiple models using a Decision Tree meta-classifier to improve overall accuracy.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="../Assets/tick_mark.png" alt="" aria-hidden="true">Cross-Validation</h4><p>Reliable performance assessment and hyperparameter tuning on training data.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="../Assets/tick_mark.png" alt="" aria-hidden="true">Error Analysis & Class Handling</h4><p>Monitored minority classes and misclassifications to refine features and models.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="../Assets/tick_mark.png" alt="" aria-hidden="true">Reproducible Pipeline</h4><p>Consistent preprocessing, training, and prediction steps for repeatable results on new data.</p></article>
         </div>
           </section>
 
@@ -267,13 +280,13 @@
 
     <footer class="site-footer container">
       <div class="footer-top">
-        <h2 class="logo"><a href="index.html">SUH/\S</a></h2>
+        <h2 class="logo"><a href="../index.html">SUH/\S</a></h2>
         <nav class="site-nav" aria-label="Footer">
-          <a href="index.html">Home</a>
-          <a class="active" href="projecttimeline.html">Projects</a>
-          <a href="aboutpage.html">About</a>
-        <a href="felor.html">Experiments</a>
-        <a href="contact.html">Contact</a>
+          <a href="../index.html">Home</a>
+          <a class="active" href="../Project_Timeline/projecttimeline.html">Projects</a>
+          <a href="../About/aboutpage.html">About</a>
+        <a href="../Experiments/felor.html">Experiments</a>
+        <a href="../Contact/contact.html">Contact</a>
           <div class="nav-social" aria-label="External links">
             <a class="social-icon" href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -396,6 +409,7 @@
       });
     })();
   </script>
+  <script src="../nav.js"></script>
 </body>
 </html>
 
