@@ -1,0 +1,63 @@
+.menu-icon{
+  width:30px;
+  cursor:pointer;
+  display:none;
+  position:absolute;
+  right:1rem;
+  top:1.4rem;
+  z-index:1001;
+}
+
+/* Side navigation panel */
+.side-nav{
+  height:100%;
+  width:0;
+  position:fixed;
+  top:0;
+  left:0;
+  background: var(--bg-panel);
+  overflow-x:hidden;
+  transition:0.3s;
+  padding-top:6rem;
+  border-right:3px solid var(--purple-line);
+  z-index:1000;
+}
+
+/* Links inside panel */
+.side-nav a{
+  padding:1rem 2rem;
+  text-decoration:none;
+  font-family:"Rajdhani", sans-serif;
+  font-weight:600;
+  font-size:1.6rem;
+  color:var(--cyan-soft);
+  display:block;
+  transition:color 0.2s ease;
+}
+
+/* Hover style */
+.side-nav a:hover{
+  color:var(--cyan);
+}
+
+/* Close button */
+.close-btn{
+  position:absolute;
+  top:1.5rem;
+  right:1.8rem;
+  font-size:2rem;
+  color:var(--pink);
+}
+
+/* Mobile behaviour */
+@media (max-width:768px){
+
+  .menu-icon{
+    display:block;
+  }
+
+  .main-nav{
+    display:none;
+  }
+
+}

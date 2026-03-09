@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Suhas | Traffic Sign Prediction</title>
+  <title>Suhas | Support Atlas</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;500;700&family=Rajdhani:wght@500;600;700&family=Roboto+Slab:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="projectpage.css">
+  <link rel="stylesheet" href="nav.css">
 </head>
 <body>
   <div class="canvas">
@@ -37,30 +38,30 @@
 
     <main class="container">
       <section class="title-block">
-        <h2>Traffic Sign Prediction</h2>
-        <p class="overview-intro">This project builds a traffic sign classification system using a subset of the German Traffic Sign Recognition Benchmark (GTSRB).</p>
+        <h2>Support Atlas</h2>
+        <p class="overview-intro">Support Atlas is a web-based mental health support platform designed to make professional help more accessible.</p>
         <ul class="overview-points">
-          <li>43 classes of regulatory, warning, and mandatory instruction signs.</li>
-          <li>Designed for real-world conditions including lighting, angle, and occlusion variation.</li>
-          <li>End-to-end pipeline: preprocessing, feature extraction, model training, evaluation, and ensemble aggregation.</li>
+          <li>Centralized hub for mental health services and trusted support pathways.</li>
+          <li>Chatbot-assisted guidance that routes users to relevant nearby services.</li>
+          <li>Location-aware discovery flow to reduce friction during help-seeking.</li>
         </ul>
       </section>
 
       <section class="hero-shot">
         <div class="project-carousel panel" data-carousel>
           <div class="carousel-stage">
-            <figure class="carousel-slide is-active" data-caption="Class distribution across all 43 traffic sign categories in the training set.">
-              <img src="Assets/traffic-sign-class-distribution.png" alt="Bar chart showing distribution of traffic sign classes">
+            <figure class="carousel-slide is-active" data-caption="Support Atlas home interface with fast access to trusted support pathways.">
+              <img src="Assets/support-atlas-home.png" alt="Support Atlas home page showing core service discovery flow">
             </figure>
-            <figure class="carousel-slide" data-caption="Stacking ensemble evaluation with tuned model parameters and confusion matrix analysis.">
-              <img src="Assets/traffic-sign-stacking-results.png" alt="Stacking model metrics and confusion matrix for traffic sign prediction">
+            <figure class="carousel-slide" data-caption="Accessibility settings including large text and dyslexia-friendly readability modes.">
+              <img src="Assets/support-atlas-accessibility.png" alt="Support Atlas accessibility settings page">
             </figure>
-            <figure class="carousel-slide" data-caption="Random Forest benchmark showing strong class-level performance and confusion matrix structure.">
-              <img src="Assets/traffic-sign-random-forest-results.png" alt="Random Forest confusion matrix and evaluation metrics for traffic signs">
+            <figure class="carousel-slide" data-caption="Anonymous chat assistant flow that guides users toward appropriate help options.">
+              <img src="Assets/support-atlas-chat.png" alt="Support Atlas chat interface">
             </figure>
           </div>
           <div class="carousel-footer">
-            <p class="carousel-caption">Class distribution across all 43 traffic sign categories in the training set.</p>
+            <p class="carousel-caption">Support Atlas home interface with fast access to trusted support pathways.</p>
             <div class="carousel-controls">
               <div class="carousel-dots">
                 <button class="carousel-dot is-active" type="button" aria-label="Show image 1"></button>
@@ -82,10 +83,15 @@
             <h3>Problem &amp; Context</h3>
             <p class="lead">Why it mattered and constraints that shape the build.</p>
             <div class="two-col">
-              <p>Traffic sign recognition is a key task for autonomous driving and advanced driver-assistance systems (ADAS). Vehicles must correctly interpret signs to navigate safely, but real-world conditions like changing lighting, camera angles, occlusions, and busy backgrounds make classification challenging.</p>
-              <p>This project uses a subset of the German Traffic Sign Recognition Benchmark (GTSRB) dataset, which includes 43 classes of signs, such as regulatory, warning, and mandatory instruction signs. The dataset is split into a labeled training set and an unlabeled test set for evaluation.</p>
-              <p>In addition to images, pre-extracted features are provided, including color histograms, HOG descriptors reduced via PCA, and features like edge density, texture variance, and average color channels. The project also involved engineering additional features and applying preprocessing to improve model performance.</p>
-              <p>Models implemented include Decision Tree, Support Vector Machine (SVM), and Linear Regression, combined into an ensemble model using a Decision Tree as the meta-classifier. The project included training and evaluation on the labeled data, followed by predicting labels for the test set, providing a complete pipeline for robust traffic sign classification.</p>
+              <p>Finding mental health support can be overwhelming, especially during moments of distress. Information about available services is often scattered across different platforms, making it difficult for users to quickly identify reliable and nearby support. Additionally, AI tools that attempt to provide direct mental health advice raise ethical and safety concerns.</p>
+              <p>This project aimed to create a centralized platform that simplifies access to mental health services. Instead of offering clinical advice, the chatbot guides users toward verified services and helps them find the nearest support options based on their location.</p>
+              <ul class="context-points">
+                <li>A central hub listing various mental health services (hotlines, counseling centers, clinics, crisis support)</li>
+                <li>A user-friendly, low-friction platform that simplifies help-seeking behavior</li>
+                <li>Designing a calm, reassuring interface suitable for sensitive contexts</li>
+                <li>A location-aware chatbot interface that helps users identify the nearest relevant service</li>
+                <li>Ensuring the chatbot does not provide clinical diagnosis or therapy</li>
+              </ul>
             </div>
           </section>
 
@@ -93,12 +99,12 @@
         <h3>Solution Overview</h3>
         <p class="lead">Key features and the core workflow.</p>
         <div class="chip-grid">
-          <article class="panel">Feature extraction from images and provided numerical features.</article>
-          <article class="panel">Feature engineering with normalization, missing value handling, and additional metrics.</article>
-          <article class="panel">Decision Tree, Random Forest, SVM, and Linear Regression classifiers implemented independently.</article>
-          <article class="panel">Ensemble model using Decision Tree as the meta-classifier.</article>
-          <article class="panel">Training and cross-validation on labeled dataset for performance optimization.</article>
-          <article class="panel">Predictions generated on unlabeled test set for final evaluation.</article>
+          <article class="panel">Structured and verified directory that consolidates mental health services — including hotlines, counseling centers, and clinics — into one accessible platform.</article>
+          <article class="panel">A conversational interface that helps users quickly identify relevant support options. The chatbot does not provide clinical advice, but instead directs users to appropriate services.</article>
+          <article class="panel">A discreet “Quick Leave” feature that allows users to instantly redirect the site if someone approaches them, particularly for users seeking help in sensitive environments.</article>
+          <article class="panel">An integrated map that detects the user’s location and displays the nearest mental health services, including distance, contact details, and directions.</article>
+          <article class="panel">Comprehensive accessibility modes including Easy Mode, Reduced Motion, Large Text Mode, Dyslexia-Friendly Mode, High Contrast and and Screen Reader Assist to ensure inclusivity</article>
+          <article class="panel">A clean, minimal interface designed to reduce cognitive overload, promote clarity, and create a safe digital environment for users seeking support.</article>
         </div>
           </section>
 
@@ -107,14 +113,16 @@
         <p class="lead">High-level system boundaries and tradeoffs.</p>
         <div class="arch-wrap">
           <div class="panel arch-box">
-            <span>Python</span>
-            <span>PyTorch</span>
-            <span>NumPy</span>
+            <span>Next.js App Router </span>
+            <span>FastAPI</span>
+            <span>Dango ORM</span>
+            <span>Supabase</span>
           </div>
           <ul>
-            <li>Preprocessing and feature engineering for normalization, missing values, and additional metrics.</li>
-            <li>Training and evaluation pipeline with cross-validation and hyperparameter tuning.</li>
-            <li>Ensemble classification combining Decision Tree, SVM, Random Forest and Linear Regression predictions.</li>
+            <li>Fixed stack: Next.js App Router + TypeScript + FastAPI</li>
+            <li>DB + ORM: Django + Supabase for OAuth</li>
+            <li>Auth: GitHub OAuth + Goggle OAuth</li>
+            <li>Route handlers for explicit HTTP boundaries and consistent error schemas.</li>
           </ul>
         </div>
           </section>
@@ -124,49 +132,32 @@
         <p class="lead">What was chosen and why.</p>
         <div class="stack-list">
           <article class="panel stack-item has-dropdown">
-            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="tsp-eng-1">
+            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="proj-eng-1">
               <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
-              Use of Multiple Machine Learning Models
+              Backend Hosting &amp; CI/CD Setup
             </button>
-            <div class="stack-dropdown" id="tsp-eng-1" hidden>
-              <p>Implemented Decision Tree, Random Forest, SVM and Linear Regression</p>
-              <p>Captures complementary strengths of different algorithms.</p>
-            </div>
+            <div class="stack-dropdown" id="proj-eng-1" hidden>this is the content for dropdown</div>
           </article>
           <article class="panel stack-item has-dropdown">
-            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="tsp-eng-2">
+            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="proj-eng-2">
               <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
-              Ensemble Learning with Decision Tree Meta-Classifier
+              Incomplete Backend Dependency
             </button>
-            <div class="stack-dropdown" id="tsp-eng-2" hidden>
-              <p>Combines predictions of base models.</p>
-              <p>Improves robustness and overall accuracy.</p>
-              <p>Reduces errors on difficult traffic sign classes.</p>
-            </div>
+            <div class="stack-dropdown" id="proj-eng-2" hidden>this is the content for dropdown</div>
           </article>
           <article class="panel stack-item has-dropdown">
-            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="tsp-eng-3">
+            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="proj-eng-3">
               <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
-              Feature Engineering and Preprocessing
+              Django REST Framework + FastAPI Integration
             </button>
-            <div class="stack-dropdown" id="tsp-eng-3" hidden>
-              <p>Normalization of numerical features.</p>
-              <p>Handling missing values.</p>
-              <p>Additional metrics like edge density, texture variance, and color channels.</p>
-              <p>Enhances model generalization and stability.</p>
-            </div>
+            <div class="stack-dropdown" id="proj-eng-3" hidden>this is the content for dropdown</div>
           </article>
           <article class="panel stack-item has-dropdown">
-            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="tsp-eng-4">
+            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="proj-eng-4">
               <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
-              Cross-Validation for Training and Evaluation
+              Ethical Chatbot Constraints
             </button>
-            <div class="stack-dropdown" id="tsp-eng-4" hidden>
-              <p>Splitting training data for validation.</p>
-              <p>Hyperparameter tuning.</p>
-              <p>Prevents overfitting.</p>
-              <p>Ensures reliable performance on unseen test data.</p>
-            </div>
+            <div class="stack-dropdown" id="proj-eng-4" hidden>this is the content for dropdown</div>
           </article>
         </div>
           </section>
@@ -175,10 +166,10 @@
         <h3>Timeline &amp; Scope</h3>
         <p class="lead">How the project moved from discovery to launch.</p>
         <div class="mini-cards">
-          <article class="panel"><h4>Data Exploration</h4><p>Analyzed images and features + identified preprocessing + additional feature needs.</p></article>
-          <article class="panel"><h4>Preprocessing</h4><p>Normalized data + handled missing values + engineered extra metrics.</p></article>
-          <article class="panel"><h4>Modeling</h4><p>Built Decision Tree + Random Forest + SVM + Linear Regression, + combined in an ensemble.</p></article>
-          <article class="panel"><h4>Evaluation</h4><p>Cross-validated models + tuned hyperparameters + predicted test labels.</p></article>
+          <article class="panel"><h4>SCAFFOLD</h4><p>Monorepo + shared config + UI package.</p></article>
+          <article class="panel"><h4>COLLAB</h4><p>Roles, invites, labels, assignees, comments, mentions.</p></article>
+          <article class="panel"><h4>CORE</h4><p>API, frontend wiring, CI.</p></article>
+          <article class="panel"><h4>OPS</h4><p>health/version, integration/E2E pipeline, Hosting, docs</p></article>
         </div>
           </section>
 
@@ -186,42 +177,10 @@
         <h3>Failures &amp; Challenges</h3>
         <p class="lead">What did not work first and what changed.</p>
         <div class="stack-list">
-          <article class="panel stack-item has-dropdown">
-            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="tsp-fail-1">
-              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
-              Feature Limitations
-            </button>
-            <div class="stack-dropdown" id="tsp-fail-1" hidden>
-              <p>Pre-extracted features were sometimes insufficient, requiring additional feature engineering.</p>
-            </div>
-          </article>
-          <article class="panel stack-item has-dropdown">
-            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="tsp-fail-2">
-              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
-              Model Performance Variability
-            </button>
-            <div class="stack-dropdown" id="tsp-fail-2" hidden>
-              <p>Individual models (Decision Tree, SVM, Linear Regression, Random Forest) had inconsistent accuracy across classes.</p>
-            </div>
-          </article>
-          <article class="panel stack-item has-dropdown">
-            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="tsp-fail-3">
-              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
-              Class Imbalance
-            </button>
-            <div class="stack-dropdown" id="tsp-fail-3" hidden>
-              <p>Some traffic sign classes had very few samples, causing higher error rates for minority classes.</p>
-            </div>
-          </article>
-          <article class="panel stack-item has-dropdown">
-            <button class="stack-toggle" type="button" aria-expanded="false" aria-controls="tsp-fail-4">
-              <img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">
-              Hyperparameter Tuning Complexity
-            </button>
-            <div class="stack-dropdown" id="tsp-fail-4" hidden>
-              <p>Finding optimal settings for multiple models and the ensemble required iterative experimentation.</p>
-            </div>
-          </article>
+          <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Route handlers were not wired correctly for one CRUD path.</article>
+          <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Validation gaps created edge-case API failures in early testing.</article>
+          <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Auth assumptions were too optimistic for cross-role access.</article>
+          <article class="panel stack-item"><img class="dropdown-icon" src="Assets/DropDown.png" alt="" aria-hidden="true">Pagination strategy needed refactor to stay fast under load.</article>
         </div>
           </section>
 
@@ -229,23 +188,25 @@
         <h3>Quality &amp; Reliability</h3>
         <p class="lead">Production checklist with evidence.</p>
         <div class="chip-grid quality-grid">
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Modular Feature Pipeline</h4><p>Separate modules for preprocessing, feature engineering, and additional metric generation.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Multiple Model Implementation</h4><p>Independent Decision Tree, Random Forest, SVM, and Linear Regression models ensure robust evaluation.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Ensemble Learning</h4><p>Combines multiple models using a Decision Tree meta-classifier to improve overall accuracy.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Cross-Validation</h4><p>Reliable performance assessment and hyperparameter tuning on training data.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Error Analysis & Class Handling</h4><p>Monitored minority classes and misclassifications to refine features and models.</p></article>
-          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Reproducible Pipeline</h4><p>Consistent preprocessing, training, and prediction steps for repeatable results on new data.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Lint / formatting</h4><p>ESLint + Prettier + Husky + lint-staged.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Type safety</h4><p>TypeScript + Zod validation on request bodies.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Unit tests</h4><p>Validators, RBAC helpers, mention parsing, rate limiting.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Integration tests</h4><p>API flows with FastAPI + Django.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Observability</h4><p>/api/health, /api/version, structured logs.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Accessibility</h4><p>Large icon mode, Dyslexia mode, reduced motion support.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">E2E smoke</h4><p>Playwright test-auth flow in CI.</p></article>
+          <article class="panel quality-item"><h4><img class="tick-icon" src="Assets/tick_mark.png" alt="" aria-hidden="true">Security</h4><p>Security headers + rate limiting + consistent errors.</p></article>
         </div>
           </section>
 
           <section id="next" class="next-steps">
         <h3>Next Steps</h3>
-        <p class="lead">If I had more time, this is where I would take this project next.</p>
+        <p class="lead">If I had two more weeks, this is where I would take it.</p>
         <ul>
-          <li>Deep feature learning using a CNN trained from scratch for richer visual representations.</li>
-          <li>Expanded ensemble with additional models such as Random Forest or Gradient Boosting.</li>
-          <li>Expand augmentation and robustness testing under harder real-world distortions.</li>
-          <li>Detailed error analysis with per-class performance tuning and feature refinement.</li>
+          <li>Add Redis-backed rate limiting for multi-instance deployments.</li>
+          <li>Add richer filtering and pagination everywhere.</li>
+          <li>Add better markdown editor for descriptions and comments.</li>
+          <li>Add guided demo tour overlay and reset demo seed endpoint.</li>
         </ul>
           </section>
         </div>

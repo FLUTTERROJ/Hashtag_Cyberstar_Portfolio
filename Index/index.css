@@ -24,10 +24,31 @@ body {
 }
 
 body {
+  position: relative;
   background: var(--bg-deep);
   color: var(--text);
   font-family: "Space Grotesk", sans-serif;
   overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(2, 0, 46, 0.08) 0%,
+      rgba(2, 0, 46, 0.18) 24%,
+      rgba(1, 0, 40, 0.42) 42%,
+      rgba(1, 0, 40, 0.7) 58%,
+      rgba(1, 0, 40, 0.9) 72%,
+      rgba(1, 0, 40, 0.98) 84%,
+      #010028 100%
+    ),
+    url("Assets/Home_page.jpg") center top / cover no-repeat;
 }
 
 main,
@@ -42,20 +63,12 @@ a {
 
 .page-shell {
   position: relative;
+  z-index: 1;
   width: 100%;
   max-width: none;
   min-height: 100vh;
   margin: 0;
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(2, 0, 46, 0.18) 0%,
-      rgba(2, 0, 46, 0.42) 34%,
-      rgba(1, 0, 40, 0.8) 58%,
-      rgba(1, 0, 40, 0.96) 78%,
-      #010028 100%
-    ),
-    url("Assets/Home_page.jpg") center top / cover no-repeat;
+  background: transparent;
   border-right: 2px solid #b13da9;
   border-left: 1px solid #4a1972;
 }
@@ -168,7 +181,7 @@ main {
   position: relative;
   display: grid;
   place-items: center;
-  background: linear-gradient(rgba(1, 0, 40, 0.04), rgba(1, 0, 40, 0.18));
+  background: linear-gradient(rgba(1, 0, 40, 0.02), rgba(1, 0, 40, 0.1));
 }
 
 .hero-content {
@@ -239,7 +252,7 @@ main {
 
 
 .lanes {
-  background: var(--bg-panel);
+  background: transparent;
   padding: 2rem var(--page-gutter) 2.8rem;
 }
 

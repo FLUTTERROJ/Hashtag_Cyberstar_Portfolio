@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Suhas | Felor</title>
+  <title>Suhas | Contact</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;500;700&family=Rajdhani:wght@500;600;700&family=Roboto+Slab:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="projectpage.css">
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="nav.css">
 </head>
 <body>
   <div class="canvas">
@@ -17,8 +18,8 @@
         <a href="index.html">Home</a>
         <a href="projecttimeline.html">Projects</a>
         <a href="aboutpage.html">About</a>
-        <a class="active" href="felor.html">Experiments</a>
-        <a href="contact.html">Contact</a>
+        <a href="felor.html">Experiments</a>
+        <a class="active" href="contact.html">Contact</a>
         <div class="nav-social" aria-label="External links">
           <a class="social-icon" href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -36,38 +37,57 @@
     </header>
 
     <main class="container">
-      <section class="title-block">
-        <h2>Felor</h2>
-        <p class="overview-intro">Felor is a mobile application built to enable remote control of household electrical devices through microcontroller hardware integrated into manual switchboards. I self-learned Flutter and Dart to develop the mobile interface and connect it with embedded hardware for real-time device control.</p>
-        <p class="overview-intro">The backend uses Firebase for secure storage and reliable app-to-device communication. The system was designed for scale, targeting up to 80% of typical households and supporting control of up to four switches and three fans per room.</p>
+      <section class="contact-hero">
+        <p class="eyebrow">CONTACT</p>
+        <h2>Lets build the next release</h2>
+        <p class="lead">Direct channels and a real submission form for ideas.</p>
       </section>
 
-      <div class="content-layout">
-        <div class="content-main">
-          <div class="felor-side-by-side">
-            <section id="work">
-              <h3>What I Built</h3>
-              <p class="lead">Key implementation points and technical focus.</p>
-              <ul class="context-points">
-                <li>Self-taught Flutter and Dart, integrating microcontroller hardware in manual switch boards for remote control.</li>
-                <li>Leveraged Firebase, MySQL, and Google Cloud for robust backend and secure data storage.</li>
-                <li>Designed to target 80% of households, achieving remote control of up to 4 switches and 3 fans per room.</li>
-              </ul>
-            </section>
-
-            <section id="impact">
-              <h3>Outcome</h3>
-              <p class="lead">The experiment proved a practical path from prototype to real household deployment.</p>
-              <div class="chip-grid">
-                <article class="panel">Cross-stack delivery from mobile app interface to physical switch-board integration.</article>
-                <article class="panel">Reliable remote control flows backed by cloud-connected storage and sync.</article>
-                <article class="panel">Feasibility validated for mainstream home usage constraints.</article>
-                <article class="panel">Strong foundation for scaling automation scenarios room-by-room.</article>
-              </div>
-            </section>
+      <section class="contact-grid">
+        <article class="panel contact-card">
+          <p class="label">EMAIL</p>
+          <h3>suhas.agrawal86@gmail.com</h3>
+          <div class="quick-links">
+            <a class="mail-btn" href="mailto:suhas.agrawal86@gmail.com">Mail me</a>
+            <a href="https://www.linkedin.com/in/suhas-agrawal/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
-        </div>
-      </div>
+        </article>
+
+        <form class="panel form-card">
+          <label>
+            <span>Your name</span>
+            <input type="text" name="name" placeholder="Your name">
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" placeholder="Email">
+          </label>
+          <label>
+            <span>Short message</span>
+            <textarea name="message" rows="5" placeholder="Short message"></textarea>
+          </label>
+          <button type="submit">Send message</button>
+        </form>
+      </section>
+
+      <section class="panel recommend-panel">
+        <p class="recommend-eyebrow">RECOMMEND A PROJECT</p>
+        <h3>What should I build next?</h3>
+        <p class="recommend-lead">Pitch an idea, a problem to solve, or a workflow you want automated.</p>
+
+        <form class="recommend-form">
+          <input type="text" name="recommend_name" placeholder="Your name">
+          <input type="email" name="recommend_email" placeholder="Email">
+          <input type="text" name="recommend_company" placeholder="Company / team">
+          <input type="text" name="recommend_role" placeholder="Your role">
+          <textarea name="recommend_project" rows="5" placeholder="What project should I build?"></textarea>
+          <input type="text" name="recommend_timeline" placeholder="Ideal timeline (optional)">
+          <textarea name="recommend_win" rows="4" placeholder="What would make it a win?"></textarea>
+          <p class="recommend-note">I build these as personal projects for fun - no payment needed. :)</p>
+          <button type="submit">Recommend a project</button>
+        </form>
+      </section>
     </main>
 
     <footer class="site-footer container">
@@ -77,8 +97,8 @@
           <a href="index.html">Home</a>
           <a href="projecttimeline.html">Projects</a>
           <a href="aboutpage.html">About</a>
-          <a class="active" href="felor.html">Experiments</a>
-          <a href="contact.html">Contact</a>
+        <a href="felor.html">Experiments</a>
+        <a class="active" href="contact.html">Contact</a>
           <div class="nav-social" aria-label="External links">
             <a class="social-icon" href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -99,3 +119,7 @@
   </div>
 </body>
 </html>
+
+
+
+
