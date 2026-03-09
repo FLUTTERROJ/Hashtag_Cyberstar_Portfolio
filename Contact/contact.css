@@ -1,9 +1,11 @@
 :root {
   --deep-bg: #020228;
   --text: #d9e3f4;
+  --text-soft: #6ec8d8;
   --line: rgba(196, 214, 255, 0.68);
   --panel: rgba(9, 12, 54, 0.76);
   --cyan: #4ed9e9;
+  --cyan-soft: #6ec8d8;
 }
 
 * {
@@ -83,6 +85,7 @@ a {
 
 .site-nav a {
   opacity: 0.68;
+  color: var(--cyan);
 }
 
 .site-nav .active {
@@ -149,18 +152,19 @@ a {
 
 .eyebrow {
   letter-spacing: 0.28em;
-  color: #9ca7c6;
+  color: #d068c8;
   font-size: 0.85rem;
 }
 
 .contact-hero h2 {
   margin-top: 0.5rem;
   font: 600 clamp(1.9rem, 3.8vw, 3.9rem) "Rajdhani", sans-serif;
+  color: var(--cyan);
 }
 
 .lead {
   margin-top: 0.5rem;
-  color: #96a2c2;
+  color: #d068c8;
   font-size: clamp(1.1rem, 1.6vw, 1.8rem);
 }
 
@@ -183,12 +187,13 @@ a {
 
 .label {
   letter-spacing: 0.34em;
-  color: #8f9bbe;
+  color: #d068c8;
 }
 
 .contact-card h3 {
   margin-top: 0.55rem;
   font-size: clamp(1.08rem, 1.8vw, 1.85rem);
+  color: var(--cyan);
 }
 
 .quick-links {
@@ -209,7 +214,7 @@ a {
 
 .quick-links a {
   font-size: 1.45rem;
-  color: #a5b1d0;
+  color: #d068c8;
 }
 
 .form-card {
@@ -258,18 +263,19 @@ a {
 
 .recommend-eyebrow {
   letter-spacing: 0.28em;
-  color: #8f9bbe;
+  color: #d068c8;
   font-size: 0.82rem;
 }
 
 .recommend-panel h3 {
   margin-top: 0.35rem;
   font: 600 clamp(1.35rem, 2.15vw, 2rem) "Rajdhani", sans-serif;
+  color: var(--cyan);
 }
 
 .recommend-lead {
   margin-top: 0.25rem;
-  color: #96a2c2;
+  color: #d068c8;
   font-size: clamp(0.8rem, 0.95vw, 1rem);
 }
 

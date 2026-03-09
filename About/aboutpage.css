@@ -156,13 +156,19 @@ a {
 }
 
 .intro h2 {
-  font: 600 clamp(1.85rem, 2.75vw, 2.6rem) "Rajdhani", sans-serif;
+  font: 600 clamp(1.9rem, 3.8vw, 3.9rem) "Rajdhani", sans-serif;
 }
 
 .intro h3 {
   margin-top: 0.1rem;
   font-size: clamp(1.3rem, 1.95vw, 2.4rem);
   color: var(--text-soft);
+}
+
+.eyebrow {
+  letter-spacing: 0.28em;
+  color: #d068c8;
+  font-size: 0.85rem;
 }
 
 .intro p {

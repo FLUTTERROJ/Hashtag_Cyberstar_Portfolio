@@ -161,12 +161,18 @@ section {
 }
 
 h2 {
-  font: 600 clamp(2.1rem, 4vw, 3.1rem) "Rajdhani", sans-serif;
+  font: 600 clamp(1.9rem, 3.8vw, 3.9rem) "Rajdhani", sans-serif;
   line-height: 1;
 }
 
 h3 {
   font: 600 clamp(1.95rem, 2.3vw, 2.5rem) "Rajdhani", sans-serif;
+}
+
+.eyebrow {
+  letter-spacing: 0.28em;
+  color: #d068c8;
+  font-size: 0.85rem;
 }
 
 .lead {
