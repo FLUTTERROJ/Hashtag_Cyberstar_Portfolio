@@ -611,8 +611,7 @@ h3 {
   }
 
   .toc {
-    position: static;
-    margin-top: 1rem;
+    display: none;
   }
 }
 
