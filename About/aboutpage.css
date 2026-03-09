@@ -64,6 +64,8 @@ a {
 
 .site-header {
   padding: 1rem 0.9rem;
+  position: relative;
+  z-index: 1001;
 }
 
 .footer-top {
@@ -377,6 +379,21 @@ a {
 }
 
 @media (max-width: 640px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .footer-top {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .site-nav {
     font-size: 1.3rem;
   }

@@ -436,6 +436,11 @@ main {
     border: none;
   }
 
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .nav-social {
     width: 100%;
     margin-left: 0;
@@ -449,8 +454,6 @@ main {
   .contact-panel {
     margin-left: 1rem;
     margin-right: 1rem;
-    padding-left: var(--page-gutter);
-    padding-right: var(--page-gutter);
   }
 
   .main-nav {

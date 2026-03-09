@@ -20,7 +20,7 @@
   transition:0.3s;
   padding-top:6rem;
   border-left:3px solid var(--purple-line);
-  z-index:1000;
+  z-index:1002;
 }
 
 /* Links inside panel */
