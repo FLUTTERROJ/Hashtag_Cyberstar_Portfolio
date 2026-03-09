@@ -168,13 +168,13 @@ a {
 }
 
 .hero h2 {
-  font: 600 clamp(1.6rem, 2.65vw, 2.8rem) "Rajdhani", sans-serif;
+  font: 600 clamp(2rem, 3vw, 3.5rem) "Rajdhani", sans-serif;
   line-height: 1;
 }
 
 .hero p {
   margin-top: 0.12rem;
-  font-size: clamp(0.875rem, 1.2vw, 1.3rem);
+  font-size: clamp(1rem, 1.5vw, 2rem);
 }
 
 .timeline {
